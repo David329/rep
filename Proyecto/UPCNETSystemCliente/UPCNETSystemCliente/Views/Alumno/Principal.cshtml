@@ -1,0 +1,39 @@
+﻿@model UPCNETSystemCliente.ViewModel.Alumno.HorarioViewModel
+@{
+    ViewBag.Title = "Principal";
+    Layout = "~/Views/Layout/AlumnoLayout.cshtml";
+}
+
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Mi Horario</strong></h5>
+    </div>
+    <div class="panel-body">
+        Horarios de toda la semana
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IDCurso</th>
+                <th>Curso</th>
+                <th>Profesor</th>
+                <th>Día</th>
+                <th>Hora Inicio</th>
+                <th>Hora Fin</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model.lstCursoClaseAlumno){
+            <tr>
+                <td>@item.idCurso</td>
+                <td>@item.curso</td>
+                <td>@item.profesor</td>
+                <td>@item.dia</td>
+                <td>@item.horaInicio</td>
+                <td>@item.horaFin</td>
+            </tr>
+            }           
+        </tbody>
+    </table>
+</div>

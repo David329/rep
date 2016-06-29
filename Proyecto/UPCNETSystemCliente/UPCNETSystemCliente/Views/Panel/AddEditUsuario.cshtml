@@ -1,0 +1,96 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._AddEditUsuario
+@{
+    ViewBag.Title = "Usuarios";
+    Model.Modo = Model.IDAlumno == "" ? "Nuevo" : "Editar";
+
+}
+
+<form role="form" method="post" action="@Url.Action("AddEditUsuario","Panel")">
+
+
+    <div class="form-group">
+        <label>Modo</label>
+        @Html.TextBoxFor(x => x.Modo, new { @class = "form-control" ,@readonly ="readonly" })
+    </div>
+    <div class="form-group">
+        <label>IDAlumno</label>
+        @Html.TextBoxFor(x => x.IDAlumno, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Apellido</label>
+        @Html.TextBoxFor(x => x.Apellido, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(x => x.Correo, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Dirección</label>
+        @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>DNI</label>
+        @Html.TextBoxFor(x => x.DNI, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        @Html.TextBoxFor(x => x.Edad, new { @class = "form-control" })
+    </div>  
+    <div class="form-group">
+        <label>Categoria</label>
+        @Html.DropDownListFor(x => x.IDCategoria, Model.selectCategorias)
+    </div>  
+    NO SOY FRONTEND AKA IRIA UNA RAYITA DE SEPARACION
+
+    <div class="form-group">
+        <label>IDApoderado</label>
+        @Html.TextBoxFor(x => x.objApoderado.IDApoderado, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(x => x.objApoderado.Nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Apellido</label>
+        @Html.TextBoxFor(x => x.objApoderado.Apellido, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(x => x.objApoderado.Correo, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        @Html.TextBoxFor(x => x.objApoderado.Pass, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Dirección</label>
+        @Html.TextBoxFor(x => x.objApoderado.Direccion, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>DNI</label>
+        @Html.TextBoxFor(x => x.objApoderado.DNI, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        @Html.TextBoxFor(x => x.objApoderado.Edad, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Condición</label>
+        @Html.TextBoxFor(x => x.objApoderado.Condicion, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fa fa-save"></i> Guardar
+    </button>
+    <a href="@Url.Action("MantenimientoUsuarios","Panel")" class="btn btn-default">
+        <i class="fa fa-arrow-circle-o-left"> Cancelar</i>
+    </a>
+</form>

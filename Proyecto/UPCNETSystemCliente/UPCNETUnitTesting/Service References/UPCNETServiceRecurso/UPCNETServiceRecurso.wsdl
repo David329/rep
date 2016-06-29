@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.upcnet.upc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UPCNETServiceRecurso" targetNamespace="http://Services.upcnet.upc.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceRecurso?xsd=1" namespace="http://Services.upcnet.upc.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getRecurso">
+    <part name="parameters" element="tns:getRecurso" />
+  </message>
+  <message name="getRecursoResponse">
+    <part name="parameters" element="tns:getRecursoResponse" />
+  </message>
+  <message name="setRecurso">
+    <part name="parameters" element="tns:setRecurso" />
+  </message>
+  <message name="setRecursoResponse">
+    <part name="parameters" element="tns:setRecursoResponse" />
+  </message>
+  <message name="editRecurso">
+    <part name="parameters" element="tns:editRecurso" />
+  </message>
+  <message name="editRecursoResponse">
+    <part name="parameters" element="tns:editRecursoResponse" />
+  </message>
+  <portType name="UPCNETServiceRecurso">
+    <operation name="getRecurso">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceRecurso/getRecursoRequest" message="tns:getRecurso" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceRecurso/getRecursoResponse" message="tns:getRecursoResponse" />
+    </operation>
+    <operation name="setRecurso">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceRecurso/setRecursoRequest" message="tns:setRecurso" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceRecurso/setRecursoResponse" message="tns:setRecursoResponse" />
+    </operation>
+    <operation name="editRecurso">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceRecurso/editRecursoRequest" message="tns:editRecurso" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceRecurso/editRecursoResponse" message="tns:editRecursoResponse" />
+    </operation>
+  </portType>
+  <binding name="UPCNETServiceRecursoPortBinding" type="tns:UPCNETServiceRecurso">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getRecurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setRecurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editRecurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UPCNETServiceRecurso">
+    <port name="UPCNETServiceRecursoPort" binding="tns:UPCNETServiceRecursoPortBinding">
+      <soap:address location="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceRecurso" />
+    </port>
+  </service>
+</definitions>

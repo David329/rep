@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.upcnet.upc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UPCNETServiceCursoClase" targetNamespace="http://Services.upcnet.upc.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceCursoClase?xsd=1" namespace="http://Services.upcnet.upc.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getCursoClaseAlumno">
+    <part name="parameters" element="tns:getCursoClaseAlumno" />
+  </message>
+  <message name="getCursoClaseAlumnoResponse">
+    <part name="parameters" element="tns:getCursoClaseAlumnoResponse" />
+  </message>
+  <message name="getCursoClaseByIdCurso">
+    <part name="parameters" element="tns:getCursoClaseByIdCurso" />
+  </message>
+  <message name="getCursoClaseByIdCursoResponse">
+    <part name="parameters" element="tns:getCursoClaseByIdCursoResponse" />
+  </message>
+  <message name="getCursoClaseByID">
+    <part name="parameters" element="tns:getCursoClaseByID" />
+  </message>
+  <message name="getCursoClaseByIDResponse">
+    <part name="parameters" element="tns:getCursoClaseByIDResponse" />
+  </message>
+  <message name="getCursoClase">
+    <part name="parameters" element="tns:getCursoClase" />
+  </message>
+  <message name="getCursoClaseResponse">
+    <part name="parameters" element="tns:getCursoClaseResponse" />
+  </message>
+  <message name="setCursoClase">
+    <part name="parameters" element="tns:setCursoClase" />
+  </message>
+  <message name="setCursoClaseResponse">
+    <part name="parameters" element="tns:setCursoClaseResponse" />
+  </message>
+  <message name="editCursoClase">
+    <part name="parameters" element="tns:editCursoClase" />
+  </message>
+  <message name="editCursoClaseResponse">
+    <part name="parameters" element="tns:editCursoClaseResponse" />
+  </message>
+  <portType name="UPCNETServiceCursoClase">
+    <operation name="getCursoClaseAlumno">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseAlumnoRequest" message="tns:getCursoClaseAlumno" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseAlumnoResponse" message="tns:getCursoClaseAlumnoResponse" />
+    </operation>
+    <operation name="getCursoClaseByIdCurso">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseByIdCursoRequest" message="tns:getCursoClaseByIdCurso" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseByIdCursoResponse" message="tns:getCursoClaseByIdCursoResponse" />
+    </operation>
+    <operation name="getCursoClaseByID">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseByIDRequest" message="tns:getCursoClaseByID" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseByIDResponse" message="tns:getCursoClaseByIDResponse" />
+    </operation>
+    <operation name="getCursoClase">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseRequest" message="tns:getCursoClase" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/getCursoClaseResponse" message="tns:getCursoClaseResponse" />
+    </operation>
+    <operation name="setCursoClase">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/setCursoClaseRequest" message="tns:setCursoClase" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/setCursoClaseResponse" message="tns:setCursoClaseResponse" />
+    </operation>
+    <operation name="editCursoClase">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/editCursoClaseRequest" message="tns:editCursoClase" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceCursoClase/editCursoClaseResponse" message="tns:editCursoClaseResponse" />
+    </operation>
+  </portType>
+  <binding name="UPCNETServiceCursoClasePortBinding" type="tns:UPCNETServiceCursoClase">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getCursoClaseAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCursoClaseByIdCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCursoClaseByID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCursoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setCursoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editCursoClase">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UPCNETServiceCursoClase">
+    <port name="UPCNETServiceCursoClasePort" binding="tns:UPCNETServiceCursoClasePortBinding">
+      <soap:address location="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceCursoClase" />
+    </port>
+  </service>
+</definitions>

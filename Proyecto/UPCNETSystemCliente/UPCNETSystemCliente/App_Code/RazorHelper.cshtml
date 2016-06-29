@@ -1,0 +1,15 @@
+﻿@helper Content(String contentName, System.Web.Mvc.UrlHelper url)
+{
+    if (contentName.EndsWith(".js"))
+    {
+        <script src="@url.Content("~/Content/" + contentName)" type="text/javascript"></script>
+    }
+    else if (contentName.EndsWith(".css"))
+    {
+        <link href="@url.Content("~/Content/" + contentName)" rel="stylesheet" type="text/css" />
+    }
+    else
+    {
+        @url.Content("~/Content/" + contentName)
+    }
+}

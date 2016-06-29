@@ -1,0 +1,23 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._AddEditCursoAlumno
+@{
+    ViewBag.Title = "Usuarios";
+    Model.Modo = Model.IDCurso == "" ? "Nuevo" : "Editar";
+}
+<form role="form" method="post" action="@Url.Action("AddEditCursoAlumno","Panel")">
+    @Html.HiddenFor(x=>x.objCursoAlumno.IDAlumno,new { @class="form-control",@readonly="readonly"})
+    <div class="form-group">
+        <label>Modo</label>
+        @Html.TextBoxFor(x => x.Modo, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Curso</label>
+        @Html.DropDownListFor(x => x.objCursoAlumno.IDCurso, Model.selectCursos)
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fa fa-save"></i> Guardar
+    </button>
+    <a href="@Url.Action("MantenimientoAlumno","Panel")" class="btn btn-default">
+        <i class="fa fa-arrow-circle-o-left"> Cancelar</i>
+    </a>
+</form>

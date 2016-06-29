@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="UPCNETServiceCategoria">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceCategoria</implementation-class>
+    </service>
+    <service name="UPCNETServiceCiclo">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceCiclo</implementation-class>
+    </service>
+    <service name="UPCNETServiceCursoAlumno">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceCursoAlumno</implementation-class>
+    </service>
+    <service name="UPCNETServiceAdministrador">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceAdministrador</implementation-class>
+    </service>
+    <service name="UPCNETServiceCursoClase">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceCursoClase</implementation-class>
+    </service>
+    <service name="UPCNETServiceRecurso">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceRecurso</implementation-class>
+    </service>
+    <service name="UPCNETServiceCurso">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceCurso</implementation-class>
+    </service>
+    <service name="UPCNETServiceAlumno">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceAlumno</implementation-class>
+    </service>
+    <service name="UPCNETServiceApoderado">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceApoderado</implementation-class>
+    </service>
+    <service name="UPCNETServiceProfesor">
+      <implementation-class>com.upc.upcnet.Services.UPCNETServiceProfesor</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

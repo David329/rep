@@ -1,0 +1,38 @@
+﻿@model UPCNETSystemCliente.ViewModel.Profesor.AddEditNotaAlumno
+@{
+    ViewBag.Title = "AddEditNotaAlumno";
+    Layout = "~/Views/Layout/ProfesorLayout.cshtml";
+//    Model.Modo = Model.IDCurso == "" ? "Nuevo" : "Editar";
+}
+<form role="form" method="post" action="@Url.Action("AddEditNotaAlumno","Profesor")">
+    @Html.HiddenFor(x=>x.objAlumnosEnCurso.IDAlumno)
+    @Html.HiddenFor(x=>x.objAlumnosEnCurso.IDCurso)
+    <div class="form-group">
+        <label>Estudiante</label>
+        @Html.TextBoxFor(x => x.objAlumnosEnCurso.nombrea, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Curso</label>
+        @Html.TextBoxFor(x => x.objAlumnosEnCurso.nombrec, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>Evaluacion</label>
+        <select id="evaluacion" class="form-control" name="evaluacion">
+            <option> PC1 </option>
+            <option> PC2 </option>
+            <option> EP </option>
+            <option> EF </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Nota</label>
+        @Html.TextBoxFor(x => x.Nota, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fa fa-save"></i> Guardar
+    </button>
+    <a href="@Url.Action("LstAlumno","Profesor")" class="btn btn-default">
+        <i class="fa fa-arrow-circle-o-left"> Cancelar</i>
+    </a>
+</form>

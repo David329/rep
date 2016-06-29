@@ -1,0 +1,95 @@
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.dll.config
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.pdb
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Newtonsoft.Json.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.Mvc.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Net.Http.Formatting.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Helpers.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.WebHost.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Mvc.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Razor.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Razor.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.Mvc.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Newtonsoft.Json.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Net.Http.Formatting.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Helpers.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.WebHost.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Mvc.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Razor.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Razor.xml
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.Globalization.ValidationString.resources
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.csproj.GenerateResource.Cache
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.dll
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.pdb
+C:\Users\Victor\Desktop\EvoTF\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.csprojResolveAssemblyReference.cache
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.dll.config
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.pdb
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Newtonsoft.Json.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.Mvc.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Helpers.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Mvc.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Razor.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Razor.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.Mvc.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Newtonsoft.Json.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Helpers.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Mvc.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Razor.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Razor.xml
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.Globalization.ValidationString.resources
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.csproj.GenerateResource.Cache
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.dll
+C:\Users\Petith\Desktop\Git UPCNET\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.pdb
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.dll.config
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\UPCNETSystemCliente.pdb
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Microsoft.Web.Infrastructure.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Newtonsoft.Json.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.Mvc.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Net.Http.Formatting.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Helpers.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.WebHost.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Mvc.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Razor.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Deployment.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Razor.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\PagedList.Mvc.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\Newtonsoft.Json.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Net.Http.Formatting.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Helpers.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Http.WebHost.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Mvc.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.Razor.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Deployment.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\bin\System.Web.WebPages.Razor.xml
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.csprojResolveAssemblyReference.cache
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.Globalization.ValidationString.resources
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.csproj.GenerateResource.Cache
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.dll
+C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\obj\Debug\UPCNETSystemCliente.pdb

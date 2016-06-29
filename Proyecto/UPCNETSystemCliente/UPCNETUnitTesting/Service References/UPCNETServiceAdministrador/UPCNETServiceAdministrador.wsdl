@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.upcnet.upc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UPCNETServiceAdministrador" targetNamespace="http://Services.upcnet.upc.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceAdministrador?xsd=1" namespace="http://Services.upcnet.upc.com/" />
+    </xsd:schema>
+  </types>
+  <message name="validarLoginAdministrador">
+    <part name="parameters" element="tns:validarLoginAdministrador" />
+  </message>
+  <message name="validarLoginAdministradorResponse">
+    <part name="parameters" element="tns:validarLoginAdministradorResponse" />
+  </message>
+  <message name="getAdministradorById">
+    <part name="parameters" element="tns:getAdministradorById" />
+  </message>
+  <message name="getAdministradorByIdResponse">
+    <part name="parameters" element="tns:getAdministradorByIdResponse" />
+  </message>
+  <message name="editAdministrador">
+    <part name="parameters" element="tns:editAdministrador" />
+  </message>
+  <message name="editAdministradorResponse">
+    <part name="parameters" element="tns:editAdministradorResponse" />
+  </message>
+  <message name="setAdministrador">
+    <part name="parameters" element="tns:setAdministrador" />
+  </message>
+  <message name="setAdministradorResponse">
+    <part name="parameters" element="tns:setAdministradorResponse" />
+  </message>
+  <message name="getAdministrador">
+    <part name="parameters" element="tns:getAdministrador" />
+  </message>
+  <message name="getAdministradorResponse">
+    <part name="parameters" element="tns:getAdministradorResponse" />
+  </message>
+  <portType name="UPCNETServiceAdministrador">
+    <operation name="validarLoginAdministrador">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/validarLoginAdministradorRequest" message="tns:validarLoginAdministrador" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/validarLoginAdministradorResponse" message="tns:validarLoginAdministradorResponse" />
+    </operation>
+    <operation name="getAdministradorById">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/getAdministradorByIdRequest" message="tns:getAdministradorById" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/getAdministradorByIdResponse" message="tns:getAdministradorByIdResponse" />
+    </operation>
+    <operation name="editAdministrador">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/editAdministradorRequest" message="tns:editAdministrador" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/editAdministradorResponse" message="tns:editAdministradorResponse" />
+    </operation>
+    <operation name="setAdministrador">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/setAdministradorRequest" message="tns:setAdministrador" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/setAdministradorResponse" message="tns:setAdministradorResponse" />
+    </operation>
+    <operation name="getAdministrador">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/getAdministradorRequest" message="tns:getAdministrador" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAdministrador/getAdministradorResponse" message="tns:getAdministradorResponse" />
+    </operation>
+  </portType>
+  <binding name="UPCNETServiceAdministradorPortBinding" type="tns:UPCNETServiceAdministrador">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="validarLoginAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAdministradorById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UPCNETServiceAdministrador">
+    <port name="UPCNETServiceAdministradorPort" binding="tns:UPCNETServiceAdministradorPortBinding">
+      <soap:address location="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceAdministrador" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,43 @@
+﻿@model UPCNETSystemCliente.ViewModel.Profesor.LstAlumnoViewModel
+@{
+    Layout = "~/Views/Layout/AlumnoLayout.cshtml";
+}
+
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Alumnos</strong></h5>
+    </div>
+    <div class="panel-body">
+        Alumnos del curso @Model.lstAlumno[0].NombreCurso
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>PC1</th>
+                <th>PC2</th>
+                <th>EP</th>
+                <th>EF</th>
+                <th>EF</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.lstAlumno) 
+            {
+            <tr>
+                <td>@item.NombreAlumno</td>
+                <td>@item.Apellido</td>
+                <td>@item.pc1</td>
+                <td>@item.pc2</td>
+                <td>@item.ep</td>
+                <td>@item.ef</td>
+                <td><a href="@Url.Action("AddEditNotaAlumno","Profesor",new {idAlumno=item.IDAlumno, idCurso=item.IDCurso, nombreCurso=item.NombreCurso, nombreAlumno=item.NombreAlumno })"><i class="fa fa-edit"></i> Registrar notas</a></td>
+            </tr>
+            }
+                                  
+        </tbody>
+    </table>
+</div>

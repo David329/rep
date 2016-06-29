@@ -1,0 +1,44 @@
+﻿@model UPCNETSystemCliente.ViewModel.Alumno.LstCursoViewModel
+@{
+    Layout = "~/Views/Layout/AlumnoLayout.cshtml";
+}
+
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Mis cursos</strong></h5>
+    </div>
+    <div class="panel-body">
+        Notas de mis cursos
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IDCurso</th>
+                <th>Curso</th>
+                <th>Profesor</th>
+                <th>PC1</th>
+                <th>EP</th>
+                <th>PC2</th>
+                <th>EF</th>
+                <th>Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.listCursoAlumnoReporte)
+            {
+            <tr>
+                <td>@item.idCurso</td>
+                <td>@item.curso</td>
+                <td>@item.profesor</td>
+                <td>@item.pc1</td>
+                <td>@item.pc2</td>
+                <td>@item.ep</td>
+                <td>@item.ef</td>
+                <td>@((item.pc1 + item.pc2 + item.ep + item.ef)/4)</td>
+            </tr>
+            }
+           
+        </tbody>
+    </table>
+</div>

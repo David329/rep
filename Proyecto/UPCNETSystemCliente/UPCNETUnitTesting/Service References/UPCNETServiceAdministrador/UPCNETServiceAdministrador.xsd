@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Services.upcnet.upc.com/" targetNamespace="http://Services.upcnet.upc.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="editAdministrador" type="tns:editAdministrador" />
+  <xs:element name="editAdministradorResponse" type="tns:editAdministradorResponse" />
+  <xs:element name="getAdministrador" type="tns:getAdministrador" />
+  <xs:element name="getAdministradorById" type="tns:getAdministradorById" />
+  <xs:element name="getAdministradorByIdResponse" type="tns:getAdministradorByIdResponse" />
+  <xs:element name="getAdministradorResponse" type="tns:getAdministradorResponse" />
+  <xs:element name="setAdministrador" type="tns:setAdministrador" />
+  <xs:element name="setAdministradorResponse" type="tns:setAdministradorResponse" />
+  <xs:element name="validarLoginAdministrador" type="tns:validarLoginAdministrador" />
+  <xs:element name="validarLoginAdministradorResponse" type="tns:validarLoginAdministradorResponse" />
+  <xs:complexType name="getAdministradorById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAdministradorByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="IDAdministrador" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarLoginAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarLoginAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="xs:string" />
+      <xs:element minOccurs="0" name="arg4" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editAdministradorResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAdministrador">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAdministradorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element minOccurs="0" name="arg3" type="xs:string" />
+      <xs:element minOccurs="0" name="arg4" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setAdministradorResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

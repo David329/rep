@@ -1,0 +1,110 @@
+﻿@model UPCNETSystemCliente.ViewModel.Login._LoginViewModel
+
+@{
+    ViewBag.Title = ConstantHelpers.TITLE;     
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+
+    @RazorHelper.Content("css/icons/icomoon/styles.css", Url)
+    @RazorHelper.Content("css/bootstrap.css", Url)
+    @RazorHelper.Content("css/core.css", Url)
+    @RazorHelper.Content("css/components.css", Url)
+    @RazorHelper.Content("css/colors.css", Url)
+    @RazorHelper.Content("js/plugins/loaders/pace.min.js", Url)
+    @RazorHelper.Content("js/core/libraries/jquery.min.js", Url)
+    @RazorHelper.Content("js/core/libraries/bootstrap.min.js", Url)
+    @RazorHelper.Content("js/plugins/loaders/blockui.min.js", Url)
+    @RazorHelper.Content("js/core/app.js", Url)
+    
+    <style>
+        #imgLogo {
+            width: 100px;
+        }
+        .pace.pace-active {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Page container -->
+    <div class="page-container login-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Simple login form -->
+                @using (Html.BeginForm())
+                {
+
+                    <div class="panel panel-body login-form">
+                        <div class="text-center">
+                            <div class="icon-object border-slate-300 text-slate-300"><img src=@Url.Content("~/Content/images/upc.png") id="imgLogo" /></div>
+                            <h5 class="content-group">Inicio de sesión<small class="display-block">Ingresa tus credenciales</small></h5>
+                        </div>
+
+                        @if (ViewData.ModelState.Any(x => x.Value.Errors.Any()))
+                        {
+                            @Html.ValidationSummary("", new { @class = "alert alert-danger" })
+                        }
+
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            @Html.TextBoxFor(x => x.UsuarioCodigo, new { @class ="form-control", placeholder="Usuario" })
+                            <div class="form-control-feedback">
+                                <i class="icon-user text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-feedback has-feedback-left">
+                            @Html.PasswordFor(x => x.UsuarioPassword, new { @class ="form-control", placeholder="Contraseña" })
+                            <div class="form-control-feedback">
+                                <i class="icon-lock2 text-muted"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Ingresar<i class="icon-circle-right2 position-right"></i></button>
+                        </div>
+
+                        <div class="text-center">
+                            <a href="login_password_recover.html">Olvidar contraseña?</a>
+                        </div>
+                    </div>
+                }
+                <!-- /simple login form -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /page content -->
+
+
+        <!-- Footer -->
+        <div class="footer text-muted">
+            &copy; 2016. <a href="#">UPCNET</a> elaborado por <a href="http://themeforest.net/user/Kopyov" target="_blank">Duspace</a>
+        </div>
+        <!-- /footer -->
+
+    </div>
+    <!-- /page container -->
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.nunit</TopNode>
+  <SelectedNode>[0-1000]C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.nunit</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.nunit" Expanded="true" />
+    <Node UniqueName="[0-1014]C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.dll" Expanded="true" />
+    <Node UniqueName="[0-1015]UPCNETUnitTesting" Expanded="true" />
+    <Node UniqueName="[0-1016]UPCNETUnitTesting.ViewModel" Expanded="true" />
+    <Node UniqueName="[0-1001]UPCNETUnitTesting.ViewModel.ViewModelTesting" Expanded="true" />
+    <Node UniqueName="[0-1004]UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_HorarioViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1006]UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_LstCursoViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1002]UPCNETUnitTesting.ViewModel.ViewModelTesting.Login_LoginViewModel_GetSet" Expanded="true" />
+    <Node UniqueName="[0-1008]UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_HorarioViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1010]UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstAlumnoViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1012]UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstCursoViewModel_Fill" Expanded="true" />
+  </Nodes>
+</VisualState>

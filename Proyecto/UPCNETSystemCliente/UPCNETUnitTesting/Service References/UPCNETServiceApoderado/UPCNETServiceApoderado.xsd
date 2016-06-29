@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Services.upcnet.upc.com/" targetNamespace="http://Services.upcnet.upc.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="editApoderado" type="tns:editApoderado" />
+  <xs:element name="editApoderadoResponse" type="tns:editApoderadoResponse" />
+  <xs:element name="getApoderado" type="tns:getApoderado" />
+  <xs:element name="getApoderadoById" type="tns:getApoderadoById" />
+  <xs:element name="getApoderadoByIdResponse" type="tns:getApoderadoByIdResponse" />
+  <xs:element name="getApoderadoResponse" type="tns:getApoderadoResponse" />
+  <xs:element name="setApoderado" type="tns:setApoderado" />
+  <xs:element name="setApoderadoResponse" type="tns:setApoderadoResponse" />
+  <xs:element name="validarLoginApoderado" type="tns:validarLoginApoderado" />
+  <xs:element name="validarLoginApoderadoResponse" type="tns:validarLoginApoderadoResponse" />
+  <xs:complexType name="getApoderado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getApoderadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="apoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="condicion" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element name="DNI" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="edad" type="xs:int" />
+      <xs:element minOccurs="0" name="IDApoderado" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="pass" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarLoginApoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validarLoginApoderadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editApoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editApoderadoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getApoderadoById">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getApoderadoByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setApoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setApoderadoResponse">
+    <xs:sequence />
+  </xs:complexType>
+</xs:schema>

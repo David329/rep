@@ -1,0 +1,39 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._AddEditCurso
+@{
+    ViewBag.Title = "Usuarios";
+    Model.Modo = Model.IDCurso == "" ? "Nuevo" : "Editar";
+}
+
+<form role="form" method="post" action="@Url.Action("AddEditCurso","Panel")">
+    <div class="form-group">
+        <label>Modo</label>
+        @Html.TextBoxFor(x => x.Modo, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>IDCurso</label>
+        @Html.TextBoxFor(x => x.objCurso.IDCurso, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(x => x.objCurso.Nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Ciclo del Curso</label>
+        @Html.TextBoxFor(x => x.objCurso.CicloDeCurso, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Maximo de Inasistencias</label>
+        @Html.TextBoxFor(x => x.objCurso.MaxInasistencia, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Profesor</label>
+        @Html.DropDownListFor(x => x.objCurso.IDProfesor, Model.selectProfesores)
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fa fa-save"></i> Guardar
+    </button>
+    <a href="@Url.Action("MantenimientoCurso","Panel")" class="btn btn-default">
+        <i class="fa fa-arrow-circle-o-left"> Cancelar</i>
+    </a>
+</form>

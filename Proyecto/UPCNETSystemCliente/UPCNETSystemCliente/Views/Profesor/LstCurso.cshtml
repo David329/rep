@@ -1,0 +1,36 @@
+﻿@model UPCNETSystemCliente.ViewModel.Profesor.LstCursoViewModel
+@{
+    Layout = "~/Views/Layout/ProfesorLayout.cshtml";
+}
+
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Mis cursos</strong></h5>
+    </div>
+    <div class="panel-body">
+        Cursos acargo
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IDCurso</th>
+                <th>Curso</th>
+                <th>Ciclo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.lstCurso) 
+            {
+            <tr>
+                <td>@item.IDCurso</td>
+                <td>@item.Nombre</td>
+                <td>@item.Ciclo</td>
+                <td><a href="@Url.Action("LstAlumno", new { idCurso = item.IDCurso})"><i class="fa fa-group"></i> Ver alumnos</a></td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

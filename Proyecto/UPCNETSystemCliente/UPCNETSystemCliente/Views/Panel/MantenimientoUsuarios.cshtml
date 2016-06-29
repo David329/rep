@@ -1,0 +1,63 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._MantenimientoUsuarios
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Mantenimiento de usuarios</strong></h5>
+    </div>
+    <div class="panel-body">
+        En esta sección podrás gestionar los usuarios del sistema.
+    </div>
+    <div class="panel-body">
+
+
+        <fieldset class="content-group">
+            <legend class="text-bold">Opciones</legend>
+            <i class="icon-user-plus">
+                <a href="@Url.Action("AddEditUsuario",  new { IDAlumno = "",Modo="Nuevo" })"> Nuevo usuario </a>
+            </i>
+        </fieldset>
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IDAlumno</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo</th>
+                <th>Password</th>
+                <th>Dirección</th>
+                <th>DNI</th>
+                <th>Edad</th>
+                <th>O1</th>
+                <th>O2</th>
+                <th>O3</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ListObjetos)
+            {
+                <tr>
+
+                    <td>@item.IDAlumno</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Apellido</td>
+                    <td>@item.Correo</td>
+                    <td>@item.Password</td>
+                    <td>@item.Direccion</td>
+                    <td>@item.DNI</td>
+                    <td>@item.Edad</td>
+                    <td>
+
+                        <a href="@Url.Action("AddEditUsuario",new{ IDAlumno = item.IDAlumno,Modo= "Editar"})"><i class="fa fa-edit"></i> Editar</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("AddEditCursoAlumno",new{ IDCurso= "",IDAlumno=item.IDAlumno,Modo="Nuevo"})"><i class="icon-add"></i> Agregar Curso</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("MantenimientoCursoAlumnos",new{ IDAlumno= item.IDAlumno})"><i class="fa fa-edit"></i> Ver Todas los cursos del alumno</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

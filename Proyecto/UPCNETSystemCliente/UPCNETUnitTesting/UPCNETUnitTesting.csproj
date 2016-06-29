@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE91E067-B9E0-4A45-8C11-394DF08EDD62}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UPCNETUnitTesting</RootNamespace>
+    <AssemblyName>UPCNETUnitTesting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>.\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UPCNETServiceAdministrador\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceAlumno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceApoderado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCategoria\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCiclo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCursoAlumno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCursoClase\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCurso\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceProfesor\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceRecurso\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModelTesting.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UPCNETSystemCliente\UPCNETSystemCliente.csproj">
+      <Project>{a504aa1c-235f-4f8b-babf-8263e1e95e35}</Project>
+      <Name>UPCNETSystemCliente</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETServiceAdministrador.wsdl" />
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETServiceAdministrador.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETUnitTesting.UPCNETServiceAdministrador.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETUnitTesting.UPCNETServiceAdministrador.editAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETUnitTesting.UPCNETServiceAdministrador.getAdministradorByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETUnitTesting.UPCNETServiceAdministrador.getAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETUnitTesting.UPCNETServiceAdministrador.setAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETUnitTesting.UPCNETServiceAdministrador.validarLoginAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETServiceAlumno.wsdl" />
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETServiceAlumno.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETUnitTesting.UPCNETServiceAlumno.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETUnitTesting.UPCNETServiceAlumno.editAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETUnitTesting.UPCNETServiceAlumno.getAlumnoByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETUnitTesting.UPCNETServiceAlumno.getAlumnosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETUnitTesting.UPCNETServiceAlumno.setAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETUnitTesting.UPCNETServiceAlumno.validarLoginAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETServiceApoderado.wsdl" />
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETServiceApoderado.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETUnitTesting.UPCNETServiceApoderado.apoderado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETUnitTesting.UPCNETServiceApoderado.editApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETUnitTesting.UPCNETServiceApoderado.getApoderadoByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETUnitTesting.UPCNETServiceApoderado.getApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETUnitTesting.UPCNETServiceApoderado.setApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETUnitTesting.UPCNETServiceApoderado.validarLoginApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETServiceCategoria.wsdl" />
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETServiceCategoria.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETUnitTesting.UPCNETServiceCategoria.categoria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETUnitTesting.UPCNETServiceCategoria.editCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETUnitTesting.UPCNETServiceCategoria.getCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETUnitTesting.UPCNETServiceCategoria.setCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETServiceCiclo.wsdl" />
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETServiceCiclo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETUnitTesting.UPCNETServiceCiclo.ciclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETUnitTesting.UPCNETServiceCiclo.editCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETUnitTesting.UPCNETServiceCiclo.getCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETUnitTesting.UPCNETServiceCiclo.setCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETServiceCursoAlumno.wsdl" />
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETServiceCursoAlumno.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.cursoAlumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.cursoAlumnoReporte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.editCursoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.getCursoAlumnoByIdCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.getCursoAlumnoByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.getCursoAlumnoReporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.getCursoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.getCursoByIdAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETUnitTesting.UPCNETServiceCursoAlumno.setCursoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETServiceCursoClase.wsdl" />
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETServiceCursoClase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.cursoClase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.cursoClaseAlumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.editCursoClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.getCursoClaseAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.getCursoClaseByIdCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.getCursoClaseByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.getCursoClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETUnitTesting.UPCNETServiceCursoClase.setCursoClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETServiceCurso.wsdl" />
+    <None Include="Service References\UPCNETServiceCurso\UPCNETServiceCurso.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETUnitTesting.UPCNETServiceCurso.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETUnitTesting.UPCNETServiceCurso.editCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETUnitTesting.UPCNETServiceCurso.getCursoByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETUnitTesting.UPCNETServiceCurso.getCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETUnitTesting.UPCNETServiceCurso.setCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETServiceProfesor.wsdl" />
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETServiceProfesor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.alumnosEnCurso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.cursoProfesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.editProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.getAlumnosEnCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.getCursoProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.getHorarioProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.getProfesorByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.getProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.horarioProfesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.profesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.setProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETUnitTesting.UPCNETServiceProfesor.validarLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETServiceRecurso.wsdl" />
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETServiceRecurso.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETUnitTesting.UPCNETServiceRecurso.editRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETUnitTesting.UPCNETServiceRecurso.getRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETUnitTesting.UPCNETServiceRecurso.recurso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETUnitTesting.UPCNETServiceRecurso.setRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UPCNETServiceAdministrador\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceAlumno\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceApoderado\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCategoria\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCiclo\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCursoAlumno\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCursoClase\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCurso\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceProfesor\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceRecurso\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCursoClase\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCursoClase\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCursoClase\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCursoAlumno\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCursoAlumno\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCursoAlumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceAdministrador\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceAdministrador\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceAdministrador\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceAlumno\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceAlumno\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceAlumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceApoderado\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceApoderado\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceApoderado\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCategoria\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCategoria\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCategoria\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCiclo\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCiclo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCiclo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCurso\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCurso\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceCurso\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceProfesor\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceProfesor\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceProfesor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceRecurso\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceRecurso\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETServiceRecurso\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

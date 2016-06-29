@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.upcnet.upc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UPCNETServiceApoderado" targetNamespace="http://Services.upcnet.upc.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceApoderado?xsd=1" namespace="http://Services.upcnet.upc.com/" />
+    </xsd:schema>
+  </types>
+  <message name="editApoderado">
+    <part name="parameters" element="tns:editApoderado" />
+  </message>
+  <message name="editApoderadoResponse">
+    <part name="parameters" element="tns:editApoderadoResponse" />
+  </message>
+  <message name="validarLoginApoderado">
+    <part name="parameters" element="tns:validarLoginApoderado" />
+  </message>
+  <message name="validarLoginApoderadoResponse">
+    <part name="parameters" element="tns:validarLoginApoderadoResponse" />
+  </message>
+  <message name="setApoderado">
+    <part name="parameters" element="tns:setApoderado" />
+  </message>
+  <message name="setApoderadoResponse">
+    <part name="parameters" element="tns:setApoderadoResponse" />
+  </message>
+  <message name="getApoderado">
+    <part name="parameters" element="tns:getApoderado" />
+  </message>
+  <message name="getApoderadoResponse">
+    <part name="parameters" element="tns:getApoderadoResponse" />
+  </message>
+  <message name="getApoderadoById">
+    <part name="parameters" element="tns:getApoderadoById" />
+  </message>
+  <message name="getApoderadoByIdResponse">
+    <part name="parameters" element="tns:getApoderadoByIdResponse" />
+  </message>
+  <portType name="UPCNETServiceApoderado">
+    <operation name="editApoderado">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/editApoderadoRequest" message="tns:editApoderado" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/editApoderadoResponse" message="tns:editApoderadoResponse" />
+    </operation>
+    <operation name="validarLoginApoderado">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/validarLoginApoderadoRequest" message="tns:validarLoginApoderado" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/validarLoginApoderadoResponse" message="tns:validarLoginApoderadoResponse" />
+    </operation>
+    <operation name="setApoderado">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/setApoderadoRequest" message="tns:setApoderado" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/setApoderadoResponse" message="tns:setApoderadoResponse" />
+    </operation>
+    <operation name="getApoderado">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/getApoderadoRequest" message="tns:getApoderado" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/getApoderadoResponse" message="tns:getApoderadoResponse" />
+    </operation>
+    <operation name="getApoderadoById">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/getApoderadoByIdRequest" message="tns:getApoderadoById" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceApoderado/getApoderadoByIdResponse" message="tns:getApoderadoByIdResponse" />
+    </operation>
+  </portType>
+  <binding name="UPCNETServiceApoderadoPortBinding" type="tns:UPCNETServiceApoderado">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="editApoderado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarLoginApoderado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setApoderado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getApoderado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getApoderadoById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UPCNETServiceApoderado">
+    <port name="UPCNETServiceApoderadoPort" binding="tns:UPCNETServiceApoderadoPortBinding">
+      <soap:address location="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceApoderado" />
+    </port>
+  </service>
+</definitions>

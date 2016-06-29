@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.upcnet.upc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UPCNETServiceAlumno" targetNamespace="http://Services.upcnet.upc.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceAlumno?xsd=1" namespace="http://Services.upcnet.upc.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getAlumnoById">
+    <part name="parameters" element="tns:getAlumnoById" />
+  </message>
+  <message name="getAlumnoByIdResponse">
+    <part name="parameters" element="tns:getAlumnoByIdResponse" />
+  </message>
+  <message name="getAlumnos">
+    <part name="parameters" element="tns:getAlumnos" />
+  </message>
+  <message name="getAlumnosResponse">
+    <part name="parameters" element="tns:getAlumnosResponse" />
+  </message>
+  <message name="setAlumno">
+    <part name="parameters" element="tns:setAlumno" />
+  </message>
+  <message name="setAlumnoResponse">
+    <part name="parameters" element="tns:setAlumnoResponse" />
+  </message>
+  <message name="editAlumno">
+    <part name="parameters" element="tns:editAlumno" />
+  </message>
+  <message name="editAlumnoResponse">
+    <part name="parameters" element="tns:editAlumnoResponse" />
+  </message>
+  <message name="validarLoginAlumno">
+    <part name="parameters" element="tns:validarLoginAlumno" />
+  </message>
+  <message name="validarLoginAlumnoResponse">
+    <part name="parameters" element="tns:validarLoginAlumnoResponse" />
+  </message>
+  <portType name="UPCNETServiceAlumno">
+    <operation name="getAlumnoById">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/getAlumnoByIdRequest" message="tns:getAlumnoById" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/getAlumnoByIdResponse" message="tns:getAlumnoByIdResponse" />
+    </operation>
+    <operation name="getAlumnos">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/getAlumnosRequest" message="tns:getAlumnos" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/getAlumnosResponse" message="tns:getAlumnosResponse" />
+    </operation>
+    <operation name="setAlumno">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/setAlumnoRequest" message="tns:setAlumno" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/setAlumnoResponse" message="tns:setAlumnoResponse" />
+    </operation>
+    <operation name="editAlumno">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/editAlumnoRequest" message="tns:editAlumno" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/editAlumnoResponse" message="tns:editAlumnoResponse" />
+    </operation>
+    <operation name="validarLoginAlumno">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/validarLoginAlumnoRequest" message="tns:validarLoginAlumno" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceAlumno/validarLoginAlumnoResponse" message="tns:validarLoginAlumnoResponse" />
+    </operation>
+  </portType>
+  <binding name="UPCNETServiceAlumnoPortBinding" type="tns:UPCNETServiceAlumno">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAlumnoById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAlumnos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="validarLoginAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UPCNETServiceAlumno">
+    <port name="UPCNETServiceAlumnoPort" binding="tns:UPCNETServiceAlumnoPortBinding">
+      <soap:address location="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceAlumno" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1021]C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.dll</TopNode>
+  <SelectedNode>[0-1000]UPCNETUnitTesting.ViewModel.ViewModelTesting</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1021]C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.dll" Expanded="true" />
+    <Node UniqueName="[0-1022]UPCNETUnitTesting" Expanded="true" />
+    <Node UniqueName="[0-1023]UPCNETUnitTesting.ViewModel" Expanded="true" />
+    <Node UniqueName="[0-1000]UPCNETUnitTesting.ViewModel.ViewModelTesting" Expanded="true" />
+    <Node UniqueName="[0-1011]UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_HorarioViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1013]UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_LstCursoViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1005]UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_AddEditApoderado_Fill" Expanded="true" />
+    <Node UniqueName="[0-1007]UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_AddEditApoderado_GetSet" Expanded="true" />
+    <Node UniqueName="[0-1003]UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_MantenimientoApoderado_GetSet" Expanded="true" />
+    <Node UniqueName="[0-1001]UPCNETUnitTesting.ViewModel.ViewModelTesting.Curso_MantenimientoCurso_GetSet" Expanded="true" />
+    <Node UniqueName="[0-1009]UPCNETUnitTesting.ViewModel.ViewModelTesting.Login_LoginViewModel_GetSet" Expanded="true" />
+    <Node UniqueName="[0-1015]UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_HorarioViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1017]UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstAlumnoViewModel_Fill" Expanded="true" />
+    <Node UniqueName="[0-1019]UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstCursoViewModel_Fill" Expanded="true" />
+  </Nodes>
+</VisualState>

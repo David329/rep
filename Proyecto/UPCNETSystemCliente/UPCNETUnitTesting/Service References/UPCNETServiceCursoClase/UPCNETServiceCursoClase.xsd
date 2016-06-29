@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Services.upcnet.upc.com/" targetNamespace="http://Services.upcnet.upc.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="editCursoClase" type="tns:editCursoClase" />
+  <xs:element name="editCursoClaseResponse" type="tns:editCursoClaseResponse" />
+  <xs:element name="getCursoClase" type="tns:getCursoClase" />
+  <xs:element name="getCursoClaseAlumno" type="tns:getCursoClaseAlumno" />
+  <xs:element name="getCursoClaseAlumnoResponse" type="tns:getCursoClaseAlumnoResponse" />
+  <xs:element name="getCursoClaseByID" type="tns:getCursoClaseByID" />
+  <xs:element name="getCursoClaseByIDResponse" type="tns:getCursoClaseByIDResponse" />
+  <xs:element name="getCursoClaseByIdCurso" type="tns:getCursoClaseByIdCurso" />
+  <xs:element name="getCursoClaseByIdCursoResponse" type="tns:getCursoClaseByIdCursoResponse" />
+  <xs:element name="getCursoClaseResponse" type="tns:getCursoClaseResponse" />
+  <xs:element name="setCursoClase" type="tns:setCursoClase" />
+  <xs:element name="setCursoClaseResponse" type="tns:setCursoClaseResponse" />
+  <xs:complexType name="editCursoClase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:cursoClase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursoClase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dia" type="xs:string" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaIni" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idClase" type="xs:string" />
+      <xs:element minOccurs="0" name="idCurso" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editCursoClaseResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="setCursoClase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:cursoClase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setCursoClaseResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idAlumno" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cursoClaseAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursoClaseAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curso" type="xs:string" />
+      <xs:element minOccurs="0" name="dia" type="xs:string" />
+      <xs:element minOccurs="0" name="horaFinal" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaInicial" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idCurso" type="xs:string" />
+      <xs:element minOccurs="0" name="profesor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseByIdCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseByIdCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cursoClase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseByID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseByIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cursoClase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getCursoClase">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getCursoClaseResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cursoClase" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

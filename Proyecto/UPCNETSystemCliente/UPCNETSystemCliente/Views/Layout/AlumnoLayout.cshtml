@@ -1,0 +1,204 @@
+﻿@{
+    ViewBag.Title = ConstantHelpers.TITLE;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="expires" content="0">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>@ViewBag.Title</title>
+
+
+    @RazorHelper.Content("css/icons/icomoon/styles.css", Url)
+    @RazorHelper.Content("css/bootstrap.css", Url)
+    @RazorHelper.Content("css/core.css", Url)
+    @RazorHelper.Content("css/components.css", Url)
+    @RazorHelper.Content("css/colors.css", Url)
+    <!-- /global stylesheets -->
+    <!-- Core JS files -->
+    @RazorHelper.Content("js/plugins/loaders/pace.min.js", Url)
+    @RazorHelper.Content("js/core/libraries/jquery.min.js", Url)
+    @RazorHelper.Content("js/core/libraries/bootstrap.min.js", Url)
+    @RazorHelper.Content("js/plugins/loaders/blockui.min.js", Url)
+    <!-- /core JS files -->
+    @RazorHelper.Content("js/plugins/forms/wizards/steps.min.js", Url)
+    <!-- Theme JS files -->
+    @RazorHelper.Content("js/plugins/visualization/d3/d3.min.js", Url)
+    @RazorHelper.Content("js/plugins/visualization/c3/c3.min.js", Url)
+
+    @RazorHelper.Content("js/core/libraries/jquery_ui/interactions.min.js", Url)
+
+    @RazorHelper.Content("js/plugins/tables/datatables/datatables.min.js", Url)
+    @RazorHelper.Content("js/plugins/forms/selects/select2.min.js", Url)
+
+    @RazorHelper.Content("js/plugins/forms/styling/uniform.min.js", Url)
+    @RazorHelper.Content("js/core/libraries/jasny_bootstrap.min.js", Url)
+    @RazorHelper.Content("js/plugins/forms/validation/validate.min.js", Url)
+    @RazorHelper.Content("js/plugins/extensions/cookie.js", Url)
+
+
+    @RazorHelper.Content("js/core/app.js", Url)
+    @RazorHelper.Content("js/pages/datatables_basic.js", Url)
+
+    @RazorHelper.Content("js/pages/wizard_steps.js", Url)
+
+    @RazorHelper.Content("js/pages/form_select2.js", Url)
+
+    <style>
+        div#panel-SubMenu {
+            padding: 6px 15px;
+        }
+
+        div#panel-Menu {
+            margin-bottom: 0px !important;
+        }
+
+        #LinkIcon {
+            color: #333 !important;
+        }
+
+        th {
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            background: #f6f6f6;
+        }
+
+        .CentrarTexto {
+            text-align: center;
+        }
+
+        tr:hover {
+            background: #f6f6f6;
+        }
+
+        .circle {
+            border: 0px solid black;
+            border-radius: 10px;
+            width: 20px;
+            height: 20px;
+            margin: 0px auto;
+        }
+
+        #ImagePerfil {
+            width: 128px;
+            height: 128px;
+        }
+
+        textarea#ProductoDescripcion {
+            height: 280px;
+        }
+
+        img#imgLogo {
+            width: 35px;
+            height: 35px;
+            margin-top: -8px;
+            display: inline-block;
+        }
+
+        .pace.pace-active {
+            display: none;
+        }
+    </style>
+    <!-- /theme JS files -->
+</head>
+<body>
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse">
+        <div class="navbar-boxed">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img src=@Url.Content("~/Content/images/upc.png") id="imgLogo" />Universidad Peruana de Ciencias Aplicadas</a>
+                <ul class="nav navbar-nav visible-xs-block">
+                    <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+                    <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse" id="navbar-mobile">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href=@Url.Action("Logout", "Home")><i class="icon-switch2"></i> Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /main navbar -->
+    <!-- Page container -->
+    <div class="page-container">
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main sidebar-default">
+                <div class="sidebar-content">
+                    <!-- Main navigation -->
+                    <div class="sidebar-category sidebar-category-visible">
+                        <div class="category-title h6">
+                            <span>Navegación</span>
+                            <ul class="icons-list">
+                                <li><a href="#" data-action="collapse"></a></li>
+                            </ul>
+                        </div>
+                        <div class="category-content sidebar-user">
+                            <div class="media">
+                                <div class="media-body">
+                                    <span class="media-heading text-semibold">@Session.Get(SessionKey.Nombre)</span>
+                                    <div class="text-size-mini text-muted">
+                                        <i class="icon-user text-size-small"></i> &nbsp;@Session.Get(SessionKey.Email)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="category-content no-padding">
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <!-- Main -->
+                                <li>
+                                    <a href=@Url.Action("Principal","Alumno")><i class="icon-users2"></i> <span>Horario</span></a>
+                                </li>
+                                <li>
+                                    <a href=@Url.Action("LstCurso","Alumno")><i class="icon-users2"></i> <span>Cursos</span></a>
+                                </li>
+                                <!-- /page kits -->
+                            </ul>
+                            
+                            <ul class="navigation navigation-main navigation-accordion">
+                                <!-- Main -->
+                                <li class="navigation-header"><span>OTROS</span> <i class="icon-menu" title="Main pages"></i></li>
+                                <li>
+                                    <a href=@Url.Action("Logout", "Home")><i class="icon-switch2"></i> <span>Cerrar sesión</span></a>
+                                </li>
+                                <!-- /page kits -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /main navigation -->
+                </div>
+            </div>
+            <!-- /main sidebar -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+                @RenderBody()
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+        <!-- Footer -->
+        <!-- /footer -->
+    </div>
+    <!-- /page container -->
+</body>
+</html>

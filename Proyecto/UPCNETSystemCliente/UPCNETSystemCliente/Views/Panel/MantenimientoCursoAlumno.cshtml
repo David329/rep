@@ -1,0 +1,38 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._MantenimientoCursoAlumno
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Listado de Alumnos por curso</strong></h5>
+    </div>
+    <div class="panel-body">
+        En esta sección podrás gestionar los Alumnos por Curso
+    </div>
+    <div class="panel-body">
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CicloDeCurso</th>
+                <th>IDCurso</th>
+                <th>IDProfesor</th>
+                <th>MaxInasistencia</th>
+                <th>O1</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ListObjetos)
+            {
+                <tr>
+
+                    <td>@item.CicloDeCurso</td>
+                    <td>@item.IDCurso</td>
+                    <td>@item.IDProfesor</td>
+                    <td>@item.MaxInasistencia</td>
+                    <td>
+                        <a href="@Url.Action("AddEditCursoAlumno",new{ IDCurso= item.IDCurso,IDAlumno="",Modo= "Editar"})"><i class="fa fa-edit"></i> Editar Curso Alumno</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,57 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._AddEditApoderado
+@{
+    ViewBag.Title = "Apoderado";
+    Model.Modo = Model.IDApoderado == "" ? "Nuevo" : "Editar";
+
+}
+<form role="form" method="post" action="@Url.Action("AddEditApoderado","Panel")">
+
+
+    <div class="form-group">
+        <label>Modo</label>
+        @Html.TextBoxFor(x => x.Modo, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+    <div class="form-group">
+        <label>IDApoderado</label>
+        @Html.TextBoxFor(x => x.IDApoderado, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Nombre</label>
+        @Html.TextBoxFor(x => x.Nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Apellido</label>
+        @Html.TextBoxFor(x => x.Apellido, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        @Html.TextBoxFor(x => x.Correo, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Dirección</label>
+        @Html.TextBoxFor(x => x.Direccion, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>DNI</label>
+        @Html.TextBoxFor(x => x.DNI, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        @Html.TextBoxFor(x => x.Edad, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Condición</label>
+        @Html.TextBoxFor(x => x.Condicion, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i class="fa fa-save"></i> Guardar
+    </button>
+    <a href="@Url.Action("MantenimientoApoderado","Panel")" class="btn btn-default">
+        <i class="fa fa-arrow-circle-o-left"> Cancelar</i>
+    </a>
+</form>

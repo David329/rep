@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.dll" total="10" errors="6" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-06-29" time="00:04:34">
+  <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8689" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\Victor\Downloads\NUnit-2.6.4\NUnit-2.6.4\bin" machine-name="DESKTOP-JTGOKJ0" user="Victor" user-domain="DESKTOP-JTGOKJ0" />
+  <culture-info current-culture="es-PE" current-uiculture="es-ES" />
+  <test-suite type="Assembly" name="C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\bin\Debug\UPCNETUnitTesting.dll" executed="True" result="Failure" success="False" time="14.168" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="UPCNETUnitTesting" executed="True" result="Failure" success="False" time="14.161" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="ViewModel" executed="True" result="Failure" success="False" time="14.161" asserts="0">
+            <results>
+              <test-suite type="TestFixture" name="ViewModelTesting" executed="True" result="Failure" success="False" time="14.160" asserts="0">
+                <results>
+                  <test-suite type="ParameterizedTest" name="Alumno_HorarioViewModel_Fill" executed="True" result="Failure" success="False" time="3.480" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_HorarioViewModel_Fill(&quot;alumno&quot;)" executed="True" result="Error" success="False" time="3.473" asserts="1">
+                        <failure>
+                          <message><![CDATA[System.ServiceModel.EndpointNotFoundException : No había ningún extremo escuchando en http://localhost:8080/UPCNETSystemWebService/UPCNETServiceCursoClase que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+  ----> System.Net.WebException : No es posible conectar con el servidor remoto
+  ----> System.Net.Sockets.SocketException : No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:8080]]></message>
+                          <stack-trace><![CDATA[
+Server stack trace:
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+en System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]:
+en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+en UPCNETSystemCliente.UPCNETServiceCursoClase.UPCNETServiceCursoClase.getCursoClaseAlumno(getCursoClaseAlumnoRequest request)
+en UPCNETSystemCliente.UPCNETServiceCursoClase.UPCNETServiceCursoClaseClient.UPCNETSystemCliente.UPCNETServiceCursoClase.UPCNETServiceCursoClase.getCursoClaseAlumno(getCursoClaseAlumnoRequest request) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceCursoClase\Reference.cs:línea 518
+en UPCNETSystemCliente.UPCNETServiceCursoClase.UPCNETServiceCursoClaseClient.getCursoClaseAlumno(String idAlumno) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceCursoClase\Reference.cs:línea 524
+en UPCNETSystemCliente.ViewModel.Alumno.HorarioViewModel.Fill(String idAlumno) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\ViewModel\Alumno\HorarioViewModel.cs:línea 18
+en UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_HorarioViewModel_Fill(String alumnoId) en C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\ViewModelTesting.cs:línea 132
+--WebException
+en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+en System.Net.HttpWebRequest.GetRequestStream()
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+--SocketException
+en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Alumno_LstCursoViewModel_Fill" executed="True" result="Failure" success="False" time="2.081" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_LstCursoViewModel_Fill(&quot;alumno&quot;)" executed="True" result="Error" success="False" time="2.080" asserts="1">
+                        <failure>
+                          <message><![CDATA[System.ServiceModel.EndpointNotFoundException : No había ningún extremo escuchando en http://localhost:8080/UPCNETSystemWebService/UPCNETServiceCursoAlumno que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+  ----> System.Net.WebException : No es posible conectar con el servidor remoto
+  ----> System.Net.Sockets.SocketException : No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:8080]]></message>
+                          <stack-trace><![CDATA[
+Server stack trace:
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+en System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]:
+en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+en UPCNETSystemCliente.UPCNETServiceCursoAlumno.UPCNETServiceCursoAlumno.getCursoAlumnoReporte(getCursoAlumnoReporteRequest request)
+en UPCNETSystemCliente.UPCNETServiceCursoAlumno.UPCNETServiceCursoAlumnoClient.UPCNETSystemCliente.UPCNETServiceCursoAlumno.UPCNETServiceCursoAlumno.getCursoAlumnoReporte(getCursoAlumnoReporteRequest request) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceCursoAlumno\Reference.cs:línea 777
+en UPCNETSystemCliente.UPCNETServiceCursoAlumno.UPCNETServiceCursoAlumnoClient.getCursoAlumnoReporte(String idAlumno) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceCursoAlumno\Reference.cs:línea 783
+en UPCNETSystemCliente.ViewModel.Alumno.LstCursoViewModel.Fill(String idAlumno) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\ViewModel\Alumno\LstCursoViewModel.cs:línea 18
+en UPCNETUnitTesting.ViewModel.ViewModelTesting.Alumno_LstCursoViewModel_Fill(String alumnoId) en C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\ViewModelTesting.cs:línea 139
+--WebException
+en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+en System.Net.HttpWebRequest.GetRequestStream()
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+--SocketException
+en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Apoderado_AddEditApoderado_Fill" executed="True" result="Failure" success="False" time="2.085" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_AddEditApoderado_Fill(&quot;AP101&quot;,&quot;modo&quot;)" executed="True" result="Error" success="False" time="2.084" asserts="0">
+                        <failure>
+                          <message><![CDATA[System.ServiceModel.EndpointNotFoundException : No había ningún extremo escuchando en http://localhost:8080/UPCNETSystemWebService/UPCNETServiceApoderado que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+  ----> System.Net.WebException : No es posible conectar con el servidor remoto
+  ----> System.Net.Sockets.SocketException : No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:8080]]></message>
+                          <stack-trace><![CDATA[
+Server stack trace:
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+en System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]:
+en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+en UPCNETSystemCliente.UPCNETServiceApoderado.UPCNETServiceApoderado.getApoderadoById(getApoderadoByIdRequest request)
+en UPCNETSystemCliente.UPCNETServiceApoderado.UPCNETServiceApoderadoClient.UPCNETSystemCliente.UPCNETServiceApoderado.UPCNETServiceApoderado.getApoderadoById(getApoderadoByIdRequest request) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceApoderado\Reference.cs:línea 490
+en UPCNETSystemCliente.UPCNETServiceApoderado.UPCNETServiceApoderadoClient.getApoderadoById(String arg0) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceApoderado\Reference.cs:línea 496
+en UPCNETSystemCliente.ViewModel.Panel._AddEditApoderado.Fill(String IDApoderado, String Modo) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\ViewModel\Panel\_AddEditApoderado.cs:línea 33
+en UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_AddEditApoderado_Fill(String apoderadoId, String modo) en C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\ViewModelTesting.cs:línea 93
+--WebException
+en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+en System.Net.HttpWebRequest.GetRequestStream()
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+--SocketException
+en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Apoderado_AddEditApoderado_GetSet" executed="True" result="Success" success="True" time="0.018" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_AddEditApoderado_GetSet(&quot;nombre&quot;,&quot;apellido&quot;,&quot;apoderado@correo.com&quot;,12345678,&quot;direccion&quot;,&quot;AP101&quot;,33,&quot;modo&quot;,&quot;condicion&quot;)" executed="True" result="Success" success="True" time="0.017" asserts="9" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Apoderado_MantenimientoApoderado_GetSet" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Apoderado_MantenimientoApoderado_GetSet(&quot;nombre&quot;,&quot;apellido&quot;,&quot;apoderado@correo.com&quot;,&quot;password&quot;,&quot;AP101&quot;,33,&quot;direccion&quot;,12345678,&quot;condicion&quot;)" executed="True" result="Success" success="True" time="0.002" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Curso_MantenimientoCurso_GetSet" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Curso_MantenimientoCurso_GetSet(1,&quot;curso&quot;,&quot;nombre&quot;,10,&quot;profesor&quot;)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Login_LoginViewModel_GetSet" executed="True" result="Success" success="True" time="0.001" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Login_LoginViewModel_GetSet(&quot;username&quot;,&quot;password&quot;)" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Profesor_HorarioViewModel_Fill" executed="True" result="Failure" success="False" time="2.061" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_HorarioViewModel_Fill(&quot;profesor&quot;)" executed="True" result="Error" success="False" time="2.061" asserts="1">
+                        <failure>
+                          <message><![CDATA[System.ServiceModel.EndpointNotFoundException : No había ningún extremo escuchando en http://localhost:8080/UPCNETSystemWebService/UPCNETServiceProfesor que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+  ----> System.Net.WebException : No es posible conectar con el servidor remoto
+  ----> System.Net.Sockets.SocketException : No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:8080]]></message>
+                          <stack-trace><![CDATA[
+Server stack trace:
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+en System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]:
+en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesor.getHorarioProfesor(getHorarioProfesorRequest request)
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesorClient.UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesor.getHorarioProfesor(getHorarioProfesorRequest request) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceProfesor\Reference.cs:línea 953
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesorClient.getHorarioProfesor(String arg0) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceProfesor\Reference.cs:línea 959
+en UPCNETSystemCliente.ViewModel.Profesor.HorarioViewModel.Fill(String idProfesor) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\ViewModel\Profesor\HorarioViewModel.cs:línea 18
+en UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_HorarioViewModel_Fill(String profesorId) en C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\ViewModelTesting.cs:línea 147
+--WebException
+en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+en System.Net.HttpWebRequest.GetRequestStream()
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+--SocketException
+en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Profesor_LstAlumnoViewModel_Fill" executed="True" result="Failure" success="False" time="2.037" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstAlumnoViewModel_Fill(&quot;curso&quot;)" executed="True" result="Error" success="False" time="2.035" asserts="1">
+                        <failure>
+                          <message><![CDATA[System.ServiceModel.EndpointNotFoundException : No había ningún extremo escuchando en http://localhost:8080/UPCNETSystemWebService/UPCNETServiceProfesor que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+  ----> System.Net.WebException : No es posible conectar con el servidor remoto
+  ----> System.Net.Sockets.SocketException : No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:8080]]></message>
+                          <stack-trace><![CDATA[
+Server stack trace:
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+en System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]:
+en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesor.getAlumnosEnCurso(getAlumnosEnCursoRequest request)
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesorClient.UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesor.getAlumnosEnCurso(getAlumnosEnCursoRequest request) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceProfesor\Reference.cs:línea 930
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesorClient.getAlumnosEnCurso(String arg0) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceProfesor\Reference.cs:línea 936
+en UPCNETSystemCliente.ViewModel.Profesor.LstAlumnoViewModel.Fill(String idCurso) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\ViewModel\Profesor\LstAlumnoViewModel.cs:línea 18
+en UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstAlumnoViewModel_Fill(String cursoId) en C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\ViewModelTesting.cs:línea 155
+--WebException
+en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+en System.Net.HttpWebRequest.GetRequestStream()
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+--SocketException
+en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                  <test-suite type="ParameterizedTest" name="Profesor_LstCursoViewModel_Fill" executed="True" result="Failure" success="False" time="2.035" asserts="0">
+                    <results>
+                      <test-case name="UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstCursoViewModel_Fill(&quot;profesor&quot;)" executed="True" result="Error" success="False" time="2.033" asserts="1">
+                        <failure>
+                          <message><![CDATA[System.ServiceModel.EndpointNotFoundException : No había ningún extremo escuchando en http://localhost:8080/UPCNETSystemWebService/UPCNETServiceProfesor que pudiera aceptar el mensaje. La causa suele ser una dirección o una acción SOAP incorrecta. Consulte InnerException, si está presente, para obtener más información.
+  ----> System.Net.WebException : No es posible conectar con el servidor remoto
+  ----> System.Net.Sockets.SocketException : No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión 127.0.0.1:8080]]></message>
+                          <stack-trace><![CDATA[
+Server stack trace:
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+en System.ServiceModel.Channels.HttpOutput.Send(TimeSpan timeout)
+en System.ServiceModel.Channels.HttpChannelFactory`1.HttpRequestChannel.HttpChannelRequest.SendRequest(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.RequestChannel.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Dispatcher.RequestChannelBinder.Request(Message message, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannel.Call(String action, Boolean oneway, ProxyOperationRuntime operation, Object[] ins, Object[] outs, TimeSpan timeout)
+en System.ServiceModel.Channels.ServiceChannelProxy.InvokeService(IMethodCallMessage methodCall, ProxyOperationRuntime operation)
+en System.ServiceModel.Channels.ServiceChannelProxy.Invoke(IMessage message)
+
+Exception rethrown at [0]:
+en System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+en System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesor.getCursoProfesor(getCursoProfesorRequest request)
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesorClient.UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesor.getCursoProfesor(getCursoProfesorRequest request) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceProfesor\Reference.cs:línea 1021
+en UPCNETSystemCliente.UPCNETServiceProfesor.UPCNETServiceProfesorClient.getCursoProfesor(String arg0) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\Service References\UPCNETServiceProfesor\Reference.cs:línea 1027
+en UPCNETSystemCliente.ViewModel.Profesor.LstCursoViewModel.Fill(String idProfesor) en C:\MiRepositorio\Proyecto\UPCNETSystemCliente\UPCNETSystemCliente\ViewModel\Profesor\LstCursoViewModel.cs:línea 18
+en UPCNETUnitTesting.ViewModel.ViewModelTesting.Profesor_LstCursoViewModel_Fill(String profesorId) en C:\Users\Victor\Desktop\Repository\Proyecto\UPCNETSystemCliente\UPCNETUnitTesting\ViewModelTesting.cs:línea 163
+--WebException
+en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+en System.Net.HttpWebRequest.GetRequestStream()
+en System.ServiceModel.Channels.HttpOutput.WebRequestHttpOutput.GetOutputStream()
+--SocketException
+en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+]]></stack-trace>
+                        </failure>
+                      </test-case>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

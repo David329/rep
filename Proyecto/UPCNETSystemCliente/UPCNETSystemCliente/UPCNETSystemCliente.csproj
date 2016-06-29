@@ -1,0 +1,1205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A504AA1C-235F-4F8B-BABF-8263E1E95E35}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UPCNETSystemCliente</RootNamespace>
+    <AssemblyName>UPCNETSystemCliente</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="nunit.core, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.core.interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.util, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\nunit.util.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NUnit.VisualStudio.TestAdapter, Version=2.0.0.0, Culture=neutral, PublicKeyToken=4cb40d35494691ac, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnitTestAdapter.2.0.0\lib\NUnit.VisualStudio.TestAdapter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business Entities\Administrador.cs" />
+    <Compile Include="Business Entities\Alumno.cs" />
+    <Compile Include="Business Entities\AlumnosEnCurso.cs" />
+    <Compile Include="Business Entities\Apoderado.cs" />
+    <Compile Include="Business Entities\Categoria.cs" />
+    <Compile Include="Business Entities\Ciclo.cs" />
+    <Compile Include="Business Entities\CursoAlumnoReporte.cs" />
+    <Compile Include="Business Entities\CursoClaseAlumno.cs" />
+    <Compile Include="Business Entities\Curso.cs" />
+    <Compile Include="Business Entities\CursoAlumno.cs" />
+    <Compile Include="Business Entities\CursoClase.cs" />
+    <Compile Include="Business Entities\CursoProfesor.cs" />
+    <Compile Include="Business Entities\Documento.cs" />
+    <Compile Include="Business Entities\HorarioProfesor.cs" />
+    <Compile Include="Business Entities\Incidencia.cs" />
+    <Compile Include="Business Entities\Profesor.cs" />
+    <Compile Include="Business Entities\Recurso.cs" />
+    <Compile Include="Controllers\AlumnoController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PanelController.cs" />
+    <Compile Include="Controllers\ProfesorController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Globalization\ValidationString.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationString.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ConstantHelpers.cs" />
+    <Compile Include="Helpers\SessionHelpers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\UPCNETServiceAdministrador\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceAlumno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceApoderado\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCategoria\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCiclo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCursoAlumno\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCursoClase\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceCurso\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceProfesor\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETServiceRecurso\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UPCNETSystemWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Alumno\HorarioViewModel.cs" />
+    <Compile Include="ViewModel\Alumno\LstCursoViewModel.cs" />
+    <Compile Include="ViewModel\Login\_LoginViewModel.cs" />
+    <Compile Include="ViewModel\Panel\_ActualizacionUsuarios.cs" />
+    <Compile Include="ViewModel\Panel\_AddEditApoderado.cs" />
+    <Compile Include="ViewModel\Panel\_AddEditCurso.cs" />
+    <Compile Include="ViewModel\Panel\_AddEditCursoAlumno.cs" />
+    <Compile Include="ViewModel\Panel\_AddEditCursoClase.cs" />
+    <Compile Include="ViewModel\Panel\_AddEditProfesor.cs" />
+    <Compile Include="ViewModel\Panel\_AddEditUsuario.cs" />
+    <Compile Include="ViewModel\Panel\_MantenimientoApoderado.cs" />
+    <Compile Include="ViewModel\Panel\_MantenimientoCurso.cs" />
+    <Compile Include="ViewModel\Panel\_MantenimientoCursoAlumno.cs" />
+    <Compile Include="ViewModel\Panel\_MantenimientoCursoClase.cs" />
+    <Compile Include="ViewModel\Panel\_MantenimientoProfesores.cs" />
+    <Compile Include="ViewModel\Panel\_MantenimientoUsuarios.cs" />
+    <Compile Include="ViewModel\Profesor\AddEditNotaAlumno.cs" />
+    <Compile Include="ViewModel\Profesor\HorarioViewModel.cs" />
+    <Compile Include="ViewModel\Profesor\LstAlumnoViewModel.cs" />
+    <Compile Include="ViewModel\Profesor\LstCursoViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\colors.css" />
+    <Content Include="Content\css\components.css" />
+    <Content Include="Content\css\core.css" />
+    <Content Include="Content\css\extras\animate.min.css" />
+    <Content Include="Content\css\icons\fontawesome\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="Content\css\icons\fontawesome\styles.min.css" />
+    <Content Include="Content\css\icons\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\css\icons\icomoon\fonts\icomoone627.svg" />
+    <Content Include="Content\css\icons\icomoon\styles.css" />
+    <Content Include="Content\demo_data\maps\vector\gdp_demo_data.js" />
+    <Content Include="Content\images\brands\amazon.png" />
+    <Content Include="Content\images\brands\bing.png" />
+    <Content Include="Content\images\brands\dribbble.png" />
+    <Content Include="Content\images\brands\facebook.png" />
+    <Content Include="Content\images\brands\spotify.png" />
+    <Content Include="Content\images\brands\twitter.png" />
+    <Content Include="Content\images\brands\youtube.png" />
+    <Content Include="Content\images\demo\cover2.jpg" />
+    <Content Include="Content\images\demo\cover3.jpg" />
+    <Content Include="Content\images\demo\flat\1.png" />
+    <Content Include="Content\images\demo\flat\10.png" />
+    <Content Include="Content\images\demo\flat\11.png" />
+    <Content Include="Content\images\demo\flat\12.png" />
+    <Content Include="Content\images\demo\flat\13.png" />
+    <Content Include="Content\images\demo\flat\14.png" />
+    <Content Include="Content\images\demo\flat\15.png" />
+    <Content Include="Content\images\demo\flat\16.png" />
+    <Content Include="Content\images\demo\flat\17.png" />
+    <Content Include="Content\images\demo\flat\18.png" />
+    <Content Include="Content\images\demo\flat\19.png" />
+    <Content Include="Content\images\demo\flat\2.png" />
+    <Content Include="Content\images\demo\flat\20.png" />
+    <Content Include="Content\images\demo\flat\21.png" />
+    <Content Include="Content\images\demo\flat\22.png" />
+    <Content Include="Content\images\demo\flat\23.png" />
+    <Content Include="Content\images\demo\flat\24.png" />
+    <Content Include="Content\images\demo\flat\25.png" />
+    <Content Include="Content\images\demo\flat\3.png" />
+    <Content Include="Content\images\demo\flat\4.png" />
+    <Content Include="Content\images\demo\flat\5.png" />
+    <Content Include="Content\images\demo\flat\6.png" />
+    <Content Include="Content\images\demo\flat\7.png" />
+    <Content Include="Content\images\demo\flat\8.png" />
+    <Content Include="Content\images\demo\flat\9.png" />
+    <Content Include="Content\images\demo\images\1.png" />
+    <Content Include="Content\images\demo\images\10.png" />
+    <Content Include="Content\images\demo\images\2.png" />
+    <Content Include="Content\images\demo\images\3.png" />
+    <Content Include="Content\images\demo\images\4.png" />
+    <Content Include="Content\images\demo\images\5.png" />
+    <Content Include="Content\images\demo\images\6.png" />
+    <Content Include="Content\images\demo\images\7.png" />
+    <Content Include="Content\images\demo\images\8.png" />
+    <Content Include="Content\images\demo\images\9.png" />
+    <Content Include="Content\images\demo\images\for_crop.png" />
+    <Content Include="Content\images\demo\users\face1.jpg" />
+    <Content Include="Content\images\demo\users\face10.jpg" />
+    <Content Include="Content\images\demo\users\face11.jpg" />
+    <Content Include="Content\images\demo\users\face12.jpg" />
+    <Content Include="Content\images\demo\users\face13.jpg" />
+    <Content Include="Content\images\demo\users\face14.jpg" />
+    <Content Include="Content\images\demo\users\face15.jpg" />
+    <Content Include="Content\images\demo\users\face16.jpg" />
+    <Content Include="Content\images\demo\users\face17.jpg" />
+    <Content Include="Content\images\demo\users\face18.jpg" />
+    <Content Include="Content\images\demo\users\face19.jpg" />
+    <Content Include="Content\images\demo\users\face2.jpg" />
+    <Content Include="Content\images\demo\users\face20.jpg" />
+    <Content Include="Content\images\demo\users\face21.jpg" />
+    <Content Include="Content\images\demo\users\face22.jpg" />
+    <Content Include="Content\images\demo\users\face23.jpg" />
+    <Content Include="Content\images\demo\users\face24.jpg" />
+    <Content Include="Content\images\demo\users\face25.jpg" />
+    <Content Include="Content\images\demo\users\face3.jpg" />
+    <Content Include="Content\images\demo\users\face4.jpg" />
+    <Content Include="Content\images\demo\users\face5.jpg" />
+    <Content Include="Content\images\demo\users\face6.jpg" />
+    <Content Include="Content\images\demo\users\face7.jpg" />
+    <Content Include="Content\images\demo\users\face8.jpg" />
+    <Content Include="Content\images\demo\users\face9.jpg" />
+    <Content Include="Content\images\demo\video1.png" />
+    <Content Include="Content\images\demo\video2.png" />
+    <Content Include="Content\images\flags\de.png" />
+    <Content Include="Content\images\flags\es.png" />
+    <Content Include="Content\images\flags\gb.png" />
+    <Content Include="Content\images\flags\hu.png" />
+    <Content Include="Content\images\flags\ru.png" />
+    <Content Include="Content\images\flags\ua.png" />
+    <Content Include="Content\images\logo_dark.png" />
+    <Content Include="Content\images\logo_demo.png" />
+    <Content Include="Content\images\logo_light.png" />
+    <Content Include="Content\images\signature.png" />
+    <Content Include="Content\images\upc.png" />
+    <Content Include="Content\js\charts\c3\c3_advanced.js" />
+    <Content Include="Content\js\charts\c3\c3_axis.js" />
+    <Content Include="Content\js\charts\c3\c3_bars_pies.js" />
+    <Content Include="Content\js\charts\c3\c3_grid.js" />
+    <Content Include="Content\js\charts\c3\c3_lines_areas.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_advanced_hierarchical.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_advanced_histogram.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_advanced_simple_interaction.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_advanced_sortable_horizontal.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_advanced_sortable_vertical.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_advanced_stacked_multiple.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_basic_grouped.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_basic_horizontal.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_basic_stacked.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_basic_stacked_normalized.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_basic_tooltip.js" />
+    <Content Include="Content\js\charts\d3\bars\bars_basic_vertical.js" />
+    <Content Include="Content\js\charts\d3\chords\chord_arcs.js" />
+    <Content Include="Content\js\charts\d3\chords\chord_basic.js" />
+    <Content Include="Content\js\charts\d3\chords\chord_chart.js" />
+    <Content Include="Content\js\charts\d3\chords\chord_tweens.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_advanced_difference.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_advanced_missing.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_advanced_small_multiples.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_advanced_spline_transition.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_advanced_transitions.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_advanced_zoom.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic_area.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic_bivariate.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic_gradient.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic_multi_series.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic_stacked.js" />
+    <Content Include="Content\js\charts\d3\lines\lines_basic_stacked_nest.js" />
+    <Content Include="Content\js\charts\d3\other\bubbles.js" />
+    <Content Include="Content\js\charts\d3\other\streamgraph.js" />
+    <Content Include="Content\js\charts\d3\other\treemap.js" />
+    <Content Include="Content\js\charts\d3\other\waterfall.js" />
+    <Content Include="Content\js\charts\d3\pies\donut_arc_tween.js" />
+    <Content Include="Content\js\charts\d3\pies\donut_basic.js" />
+    <Content Include="Content\js\charts\d3\pies\donut_entry_animation.js" />
+    <Content Include="Content\js\charts\d3\pies\donut_multiple.js" />
+    <Content Include="Content\js\charts\d3\pies\donut_multiple_nesting.js" />
+    <Content Include="Content\js\charts\d3\pies\donut_update.js" />
+    <Content Include="Content\js\charts\d3\pies\pie_arc_tween.js" />
+    <Content Include="Content\js\charts\d3\pies\pie_basic.js" />
+    <Content Include="Content\js\charts\d3\pies\pie_entry_animation.js" />
+    <Content Include="Content\js\charts\d3\pies\pie_multiple.js" />
+    <Content Include="Content\js\charts\d3\pies\pie_multiple_nesting.js" />
+    <Content Include="Content\js\charts\d3\pies\pie_update.js" />
+    <Content Include="Content\js\charts\d3\sunburst\sunburst_basic.js" />
+    <Content Include="Content\js\charts\d3\sunburst\sunburst_combined.js" />
+    <Content Include="Content\js\charts\d3\sunburst\sunburst_distortion.js" />
+    <Content Include="Content\js\charts\d3\sunburst\sunburst_zoom.js" />
+    <Content Include="Content\js\charts\d3\tree\tree_basic.js" />
+    <Content Include="Content\js\charts\d3\tree\tree_bracket.js" />
+    <Content Include="Content\js\charts\d3\tree\tree_collapsible.js" />
+    <Content Include="Content\js\charts\d3\tree\tree_dendrogram.js" />
+    <Content Include="Content\js\charts\d3\tree\tree_dendrogram_radial.js" />
+    <Content Include="Content\js\charts\d3\tree\tree_radial.js" />
+    <Content Include="Content\js\charts\d3\venn\venn_basic.js" />
+    <Content Include="Content\js\charts\d3\venn\venn_colors.js" />
+    <Content Include="Content\js\charts\d3\venn\venn_interactive.js" />
+    <Content Include="Content\js\charts\d3\venn\venn_rings.js" />
+    <Content Include="Content\js\charts\d3\venn\venn_tooltip.js" />
+    <Content Include="Content\js\charts\d3\venn\venn_weighted.js" />
+    <Content Include="Content\js\charts\dimple\area\area_horizontal.js" />
+    <Content Include="Content\js\charts\dimple\area\area_horizontal_grouped.js" />
+    <Content Include="Content\js\charts\dimple\area\area_horizontal_stacked.js" />
+    <Content Include="Content\js\charts\dimple\area\area_horizontal_stacked_grouped.js" />
+    <Content Include="Content\js\charts\dimple\area\area_horizontal_stacked_normalized.js" />
+    <Content Include="Content\js\charts\dimple\area\area_vertical.js" />
+    <Content Include="Content\js\charts\dimple\area\area_vertical_grouped.js" />
+    <Content Include="Content\js\charts\dimple\area\area_vertical_stacked.js" />
+    <Content Include="Content\js\charts\dimple\area\area_vertical_stacked_grouped.js" />
+    <Content Include="Content\js\charts\dimple\area\area_vertical_stacked_normalized.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_horizontal.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_horizontal_grouped.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_horizontal_stacked.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_horizontal_stacked_grouped.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_horizontal_stacked_normalized.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_vertical.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_vertical_grouped.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_vertical_stacked.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_vertical_stacked_grouped.js" />
+    <Content Include="Content\js\charts\dimple\bars\bar_vertical_stacked_normalized.js" />
+    <Content Include="Content\js\charts\dimple\bubble\bubble_basic.js" />
+    <Content Include="Content\js\charts\dimple\bubble\bubble_horizontal_lollipop.js" />
+    <Content Include="Content\js\charts\dimple\bubble\bubble_lollipop_grouped.js" />
+    <Content Include="Content\js\charts\dimple\bubble\bubble_matrix.js" />
+    <Content Include="Content\js\charts\dimple\bubble\bubble_vertical_lollipop.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_horizontal_multiple.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_horizontal_multiple_grouped.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_horizontal_single.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_horizontal_single_grouped.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_vertical_multiple.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_vertical_multiple_grouped.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_vertical_single.js" />
+    <Content Include="Content\js\charts\dimple\lines\line_vertical_single_grouped.js" />
+    <Content Include="Content\js\charts\dimple\pies\pie_basic.js" />
+    <Content Include="Content\js\charts\dimple\pies\pie_bubble.js" />
+    <Content Include="Content\js\charts\dimple\pies\pie_legend.js" />
+    <Content Include="Content\js\charts\dimple\pies\pie_lollipop.js" />
+    <Content Include="Content\js\charts\dimple\pies\pie_matrix.js" />
+    <Content Include="Content\js\charts\dimple\pies\pie_scatter.js" />
+    <Content Include="Content\js\charts\dimple\rings\ring_basic.js" />
+    <Content Include="Content\js\charts\dimple\rings\ring_bubble.js" />
+    <Content Include="Content\js\charts\dimple\rings\ring_concentric.js" />
+    <Content Include="Content\js\charts\dimple\rings\ring_lollipop.js" />
+    <Content Include="Content\js\charts\dimple\rings\ring_matrix.js" />
+    <Content Include="Content\js\charts\dimple\rings\ring_scatter.js" />
+    <Content Include="Content\js\charts\dimple\scatter\scatter_basic.js" />
+    <Content Include="Content\js\charts\dimple\scatter\scatter_horizontal_lollipop.js" />
+    <Content Include="Content\js\charts\dimple\scatter\scatter_lollipop_grouped.js" />
+    <Content Include="Content\js\charts\dimple\scatter\scatter_matrix.js" />
+    <Content Include="Content\js\charts\dimple\scatter\scatter_vertical_lollipop.js" />
+    <Content Include="Content\js\charts\dimple\step\step_horizontal_multiple.js" />
+    <Content Include="Content\js\charts\dimple\step\step_horizontal_multiple_grouped.js" />
+    <Content Include="Content\js\charts\dimple\step\step_horizontal_single.js" />
+    <Content Include="Content\js\charts\dimple\step\step_horizontal_single_grouped.js" />
+    <Content Include="Content\js\charts\dimple\step\step_vertical_multiple.js" />
+    <Content Include="Content\js\charts\dimple\step\step_vertical_multiple_grouped.js" />
+    <Content Include="Content\js\charts\dimple\step\step_vertical_single.js" />
+    <Content Include="Content\js\charts\dimple\step\step_vertical_single_grouped.js" />
+    <Content Include="Content\js\charts\echarts\bars_tornados.js" />
+    <Content Include="Content\js\charts\echarts\candlesticks_others.js" />
+    <Content Include="Content\js\charts\echarts\columns_waterfalls.js" />
+    <Content Include="Content\js\charts\echarts\combinations.js" />
+    <Content Include="Content\js\charts\echarts\funnels_chords.js" />
+    <Content Include="Content\js\charts\echarts\lines_areas.js" />
+    <Content Include="Content\js\charts\echarts\pies_donuts.js" />
+    <Content Include="Content\js\charts\echarts\scatter.js" />
+    <Content Include="Content\js\charts\echarts\timeline_option.js" />
+    <Content Include="Content\js\charts\google\bars\bar.js" />
+    <Content Include="Content\js\charts\google\bars\bar_stacked.js" />
+    <Content Include="Content\js\charts\google\bars\column.js" />
+    <Content Include="Content\js\charts\google\bars\column_stacked.js" />
+    <Content Include="Content\js\charts\google\bars\combo.js" />
+    <Content Include="Content\js\charts\google\bars\histogram.js" />
+    <Content Include="Content\js\charts\google\bubbles\bubble.js" />
+    <Content Include="Content\js\charts\google\bubbles\bubble_gradient.js" />
+    <Content Include="Content\js\charts\google\lines\area.js" />
+    <Content Include="Content\js\charts\google\lines\area_intervals.js" />
+    <Content Include="Content\js\charts\google\lines\area_stacked.js" />
+    <Content Include="Content\js\charts\google\lines\area_stepped.js" />
+    <Content Include="Content\js\charts\google\lines\lines.js" />
+    <Content Include="Content\js\charts\google\lines\line_intervals.js" />
+    <Content Include="Content\js\charts\google\other\candlestick.js" />
+    <Content Include="Content\js\charts\google\other\diff.js" />
+    <Content Include="Content\js\charts\google\other\geo.js" />
+    <Content Include="Content\js\charts\google\other\sankey.js" />
+    <Content Include="Content\js\charts\google\other\trendline.js" />
+    <Content Include="Content\js\charts\google\pies\3d_exploded.js" />
+    <Content Include="Content\js\charts\google\pies\donut.js" />
+    <Content Include="Content\js\charts\google\pies\donut_exploded.js" />
+    <Content Include="Content\js\charts\google\pies\donut_rotate.js" />
+    <Content Include="Content\js\charts\google\pies\pie.js" />
+    <Content Include="Content\js\charts\google\pies\pie_3d.js" />
+    <Content Include="Content\js\charts\google\pies\pie_diff_border.js" />
+    <Content Include="Content\js\charts\google\pies\pie_diff_invert.js" />
+    <Content Include="Content\js\charts\google\pies\pie_diff_opacity.js" />
+    <Content Include="Content\js\charts\google\pies\pie_diff_radius.js" />
+    <Content Include="Content\js\charts\google\pies\pie_exploded.js" />
+    <Content Include="Content\js\charts\google\pies\pie_rotate.js" />
+    <Content Include="Content\js\charts\google\scatter\scatter.js" />
+    <Content Include="Content\js\charts\google\scatter\scatter_diff.js" />
+    <Content Include="Content\js\core\app.js" />
+    <Content Include="Content\js\core\libraries\bootstrap.min.js" />
+    <Content Include="Content\js\core\libraries\jasny_bootstrap.min.js" />
+    <Content Include="Content\js\core\libraries\jquery.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\autocomplete.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\core.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\datepicker.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\effects.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\interactions.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\sliders.min.js" />
+    <Content Include="Content\js\core\libraries\jquery_ui\touch.min.js" />
+    <Content Include="Content\js\maps\google\basic\basic.js" />
+    <Content Include="Content\js\maps\google\basic\click_event.js" />
+    <Content Include="Content\js\maps\google\basic\coordinates.js" />
+    <Content Include="Content\js\maps\google\basic\geolocation.js" />
+    <Content Include="Content\js\maps\google\controls\adding_controls.js" />
+    <Content Include="Content\js\maps\google\controls\control_options.js" />
+    <Content Include="Content\js\maps\google\controls\control_positioning.js" />
+    <Content Include="Content\js\maps\google\controls\disable_ui.js" />
+    <Content Include="Content\js\maps\google\drawings\circles.js" />
+    <Content Include="Content\js\maps\google\drawings\polygons.js" />
+    <Content Include="Content\js\maps\google\drawings\polylines.js" />
+    <Content Include="Content\js\maps\google\drawings\rectangles.js" />
+    <Content Include="Content\js\maps\google\layers\bicycling.js" />
+    <Content Include="Content\js\maps\google\layers\fusion_tables.js" />
+    <Content Include="Content\js\maps\google\layers\traffic.js" />
+    <Content Include="Content\js\maps\google\layers\transit.js" />
+    <Content Include="Content\js\maps\google\markers\animation.js" />
+    <Content Include="Content\js\maps\google\markers\simple.js" />
+    <Content Include="Content\js\maps\google\markers\symbols_custom.js" />
+    <Content Include="Content\js\maps\google\markers\symbols_predefined.js" />
+    <Content Include="Content\js\maps\vector\vector_maps_demo.js" />
+    <Content Include="Content\js\pages\appearance_draggable_panels.js" />
+    <Content Include="Content\js\pages\appearance_panel_heading.js" />
+    <Content Include="Content\js\pages\colors_blue.js" />
+    <Content Include="Content\js\pages\colors_brown.js" />
+    <Content Include="Content\js\pages\colors_danger.js" />
+    <Content Include="Content\js\pages\colors_green.js" />
+    <Content Include="Content\js\pages\colors_grey.js" />
+    <Content Include="Content\js\pages\colors_indigo.js" />
+    <Content Include="Content\js\pages\colors_info.js" />
+    <Content Include="Content\js\pages\colors_orange.js" />
+    <Content Include="Content\js\pages\colors_pink.js" />
+    <Content Include="Content\js\pages\colors_primary.js" />
+    <Content Include="Content\js\pages\colors_purple.js" />
+    <Content Include="Content\js\pages\colors_slate.js" />
+    <Content Include="Content\js\pages\colors_success.js" />
+    <Content Include="Content\js\pages\colors_teal.js" />
+    <Content Include="Content\js\pages\colors_violet.js" />
+    <Content Include="Content\js\pages\colors_warning.js" />
+    <Content Include="Content\js\pages\components_animations.js" />
+    <Content Include="Content\js\pages\components_buttons.js" />
+    <Content Include="Content\js\pages\components_dropdowns.js" />
+    <Content Include="Content\js\pages\components_loaders.js" />
+    <Content Include="Content\js\pages\components_media.js" />
+    <Content Include="Content\js\pages\components_modals.js" />
+    <Content Include="Content\js\pages\components_navs.js" />
+    <Content Include="Content\js\pages\components_notifications_other.js" />
+    <Content Include="Content\js\pages\components_notifications_pnotify.js" />
+    <Content Include="Content\js\pages\components_page_header.js" />
+    <Content Include="Content\js\pages\components_pagination.js" />
+    <Content Include="Content\js\pages\components_popups.js" />
+    <Content Include="Content\js\pages\components_sliders.js" />
+    <Content Include="Content\js\pages\components_thumbnails.js" />
+    <Content Include="Content\js\pages\dashboard.js" />
+    <Content Include="Content\js\pages\dashboard_boxed.js" />
+    <Content Include="Content\js\pages\dashboard_boxed_full.js" />
+    <Content Include="Content\js\pages\datatables_advanced.js" />
+    <Content Include="Content\js\pages\datatables_api.js" />
+    <Content Include="Content\js\pages\datatables_basic.js" />
+    <Content Include="Content\js\pages\datatables_data_sources.js" />
+    <Content Include="Content\js\pages\datatables_extension_colvis.js" />
+    <Content Include="Content\js\pages\datatables_extension_fixed_columns.js" />
+    <Content Include="Content\js\pages\datatables_extension_reorder.js" />
+    <Content Include="Content\js\pages\datatables_extension_scroller.js" />
+    <Content Include="Content\js\pages\datatables_extension_tools.js" />
+    <Content Include="Content\js\pages\datatables_responsive.js" />
+    <Content Include="Content\js\pages\datatables_sorting.js" />
+    <Content Include="Content\js\pages\editor_ckeditor.js" />
+    <Content Include="Content\js\pages\editor_code.js" />
+    <Content Include="Content\js\pages\editor_summernote.js" />
+    <Content Include="Content\js\pages\editor_wysihtml5.js" />
+    <Content Include="Content\js\pages\extension_blockui.js" />
+    <Content Include="Content\js\pages\extension_image_cropper.js" />
+    <Content Include="Content\js\pages\extension_velocity_basic.js" />
+    <Content Include="Content\js\pages\extension_velocity_examples.js" />
+    <Content Include="Content\js\pages\extension_velocity_ui.js" />
+    <Content Include="Content\js\pages\extra_context_menu.js" />
+    <Content Include="Content\js\pages\extra_fullcalendar.js" />
+    <Content Include="Content\js\pages\extra_fullcalendar_advanced.js" />
+    <Content Include="Content\js\pages\extra_fullcalendar_formats.js" />
+    <Content Include="Content\js\pages\extra_idle_timeout.js" />
+    <Content Include="Content\js\pages\extra_session_timeout.js" />
+    <Content Include="Content\js\pages\extra_trees.js" />
+    <Content Include="Content\js\pages\form_bootstrap_select.js" />
+    <Content Include="Content\js\pages\form_checkboxes_radios.js" />
+    <Content Include="Content\js\pages\form_controls_extended.js" />
+    <Content Include="Content\js\pages\form_dual_listboxes.js" />
+    <Content Include="Content\js\pages\form_editable.js" />
+    <Content Include="Content\js\pages\form_inputs.js" />
+    <Content Include="Content\js\pages\form_input_groups.js" />
+    <Content Include="Content\js\pages\form_layouts.js" />
+    <Content Include="Content\js\pages\form_multiselect.js" />
+    <Content Include="Content\js\pages\form_select2.js" />
+    <Content Include="Content\js\pages\form_selectbox.js" />
+    <Content Include="Content\js\pages\form_tags_input.js" />
+    <Content Include="Content\js\pages\form_validation.js" />
+    <Content Include="Content\js\pages\gallery.js" />
+    <Content Include="Content\js\pages\gallery_library.js" />
+    <Content Include="Content\js\pages\internationalization_callbacks.js" />
+    <Content Include="Content\js\pages\internationalization_fallback.js" />
+    <Content Include="Content\js\pages\internationalization_on_init.js" />
+    <Content Include="Content\js\pages\internationalization_switch_direct.js" />
+    <Content Include="Content\js\pages\internationalization_switch_query.js" />
+    <Content Include="Content\js\pages\invoice_archive.js" />
+    <Content Include="Content\js\pages\invoice_grid.js" />
+    <Content Include="Content\js\pages\invoice_template.js" />
+    <Content Include="Content\js\pages\layout_navbar_hideable.js" />
+    <Content Include="Content\js\pages\layout_sidebar_sticky.js" />
+    <Content Include="Content\js\pages\layout_sidebar_sticky_custom.js" />
+    <Content Include="Content\js\pages\login.js" />
+    <Content Include="Content\js\pages\navbar_components.js" />
+    <Content Include="Content\js\pages\navbar_hideable.js" />
+    <Content Include="Content\js\pages\navbar_multiple.js" />
+    <Content Include="Content\js\pages\navbar_single.js" />
+    <Content Include="Content\js\pages\navigation_horizontal_elements.js" />
+    <Content Include="Content\js\pages\navigation_horizontal_mega.js" />
+    <Content Include="Content\js\pages\navigation_vertical_sizing.js" />
+    <Content Include="Content\js\pages\picker_color.js" />
+    <Content Include="Content\js\pages\picker_date.js" />
+    <Content Include="Content\js\pages\picker_location.js" />
+    <Content Include="Content\js\pages\sidebar_components.js" />
+    <Content Include="Content\js\pages\sidebar_dual.js" />
+    <Content Include="Content\js\pages\support_chat_layouts.js" />
+    <Content Include="Content\js\pages\table_elements.js" />
+    <Content Include="Content\js\pages\table_responsive.js" />
+    <Content Include="Content\js\pages\tasks_grid.js" />
+    <Content Include="Content\js\pages\tasks_list.js" />
+    <Content Include="Content\js\pages\task_detailed.js" />
+    <Content Include="Content\js\pages\timelines.js" />
+    <Content Include="Content\js\pages\uploader_bootstrap.js" />
+    <Content Include="Content\js\pages\uploader_dropzone.js" />
+    <Content Include="Content\js\pages\uploader_plupload.js" />
+    <Content Include="Content\js\pages\user_pages_list.js" />
+    <Content Include="Content\js\pages\user_pages_profile.js" />
+    <Content Include="Content\js\pages\user_pages_team.js" />
+    <Content Include="Content\js\pages\wizard_form.js" />
+    <Content Include="Content\js\pages\wizard_steps.js" />
+    <Content Include="Content\js\pages\wizard_stepy.js" />
+    <Content Include="Content\js\plugins\buttons\hover_dropdown.min.js" />
+    <Content Include="Content\js\plugins\buttons\ladda.min.js" />
+    <Content Include="Content\js\plugins\buttons\spin.min.js" />
+    <Content Include="Content\js\plugins\editors\ace\ace.js" />
+    <Content Include="Content\js\plugins\editors\summernote\summernote.min.js" />
+    <Content Include="Content\js\plugins\editors\wysihtml5\locales\bootstrap-wysihtml5.ua-UA.js" />
+    <Content Include="Content\js\plugins\editors\wysihtml5\parsers.js" />
+    <Content Include="Content\js\plugins\editors\wysihtml5\toolbar.js" />
+    <Content Include="Content\js\plugins\editors\wysihtml5\wysihtml5.min.js" />
+    <Content Include="Content\js\plugins\extensions\contextmenu.js" />
+    <Content Include="Content\js\plugins\extensions\cookie.js" />
+    <Content Include="Content\js\plugins\extensions\mockjax.min.js" />
+    <Content Include="Content\js\plugins\extensions\session_timeout.min.js" />
+    <Content Include="Content\js\plugins\forms\editable\address.js" />
+    <Content Include="Content\js\plugins\forms\editable\editable.min.js" />
+    <Content Include="Content\js\plugins\forms\inputs\autosize.min.js" />
+    <Content Include="Content\js\plugins\forms\inputs\duallistbox.min.js" />
+    <Content Include="Content\js\plugins\forms\inputs\formatter.min.js" />
+    <Content Include="Content\js\plugins\forms\inputs\maxlength.min.js" />
+    <Content Include="Content\js\plugins\forms\inputs\passy.js" />
+    <Content Include="Content\js\plugins\forms\inputs\touchspin.min.js" />
+    <Content Include="Content\js\plugins\forms\inputs\typeahead\handlebars.js" />
+    <Content Include="Content\js\plugins\forms\inputs\typeahead\typeahead.bundle.min.js" />
+    <Content Include="Content\js\plugins\forms\selects\bootstrap_multiselect.js" />
+    <Content Include="Content\js\plugins\forms\selects\bootstrap_select.min.js" />
+    <Content Include="Content\js\plugins\forms\selects\select2.min.js" />
+    <Content Include="Content\js\plugins\forms\selects\selectboxit.min.js" />
+    <Content Include="Content\js\plugins\forms\styling\switch.min.js" />
+    <Content Include="Content\js\plugins\forms\styling\switchery.min.js" />
+    <Content Include="Content\js\plugins\forms\styling\uniform.min.js" />
+    <Content Include="Content\js\plugins\forms\tags\tagsinput.min.js" />
+    <Content Include="Content\js\plugins\forms\tags\tokenfield.min.js" />
+    <Content Include="Content\js\plugins\forms\validation\validate.min.js" />
+    <Content Include="Content\js\plugins\forms\wizards\form_wizard\form.min.js" />
+    <Content Include="Content\js\plugins\forms\wizards\form_wizard\form_wizard.min.js" />
+    <Content Include="Content\js\plugins\forms\wizards\steps.min.js" />
+    <Content Include="Content\js\plugins\forms\wizards\stepy.min.js" />
+    <Content Include="Content\js\plugins\internationalization\i18next.min.js" />
+    <Content Include="Content\js\plugins\loaders\blockui.min.js" />
+    <Content Include="Content\js\plugins\loaders\pace.min.js" />
+    <Content Include="Content\js\plugins\loaders\progressbar.min.js" />
+    <Content Include="Content\js\plugins\maps\jvectormap\jvectormap.min.js" />
+    <Content Include="Content\js\plugins\maps\jvectormap\map_files\countries\germany.js" />
+    <Content Include="Content\js\plugins\maps\jvectormap\map_files\countries\usa.js" />
+    <Content Include="Content\js\plugins\maps\jvectormap\map_files\world.js" />
+    <Content Include="Content\js\plugins\media\cropper.min.js" />
+    <Content Include="Content\js\plugins\media\fancybox.min.js" />
+    <Content Include="Content\js\plugins\notifications\bootbox.min.js" />
+    <Content Include="Content\js\plugins\notifications\jgrowl.min.js" />
+    <Content Include="Content\js\plugins\notifications\noty.min.js" />
+    <Content Include="Content\js\plugins\notifications\pnotify.min.js" />
+    <Content Include="Content\js\plugins\notifications\sweet_alert.min.js" />
+    <Content Include="Content\js\plugins\pagination\bootpag.min.js" />
+    <Content Include="Content\js\plugins\pagination\bs_pagination.min.js" />
+    <Content Include="Content\js\plugins\pagination\datepaginator.min.js" />
+    <Content Include="Content\js\plugins\pickers\anytime.min.js" />
+    <Content Include="Content\js\plugins\pickers\color\spectrum.js" />
+    <Content Include="Content\js\plugins\pickers\datepicker.js" />
+    <Content Include="Content\js\plugins\pickers\daterangepicker.js" />
+    <Content Include="Content\js\plugins\pickers\location\autocomplete_addresspicker.js" />
+    <Content Include="Content\js\plugins\pickers\location\location.js" />
+    <Content Include="Content\js\plugins\pickers\location\typeahead_addresspicker.js" />
+    <Content Include="Content\js\plugins\pickers\pickadate\legacy.js" />
+    <Content Include="Content\js\plugins\pickers\pickadate\picker.date.js" />
+    <Content Include="Content\js\plugins\pickers\pickadate\picker.js" />
+    <Content Include="Content\js\plugins\pickers\pickadate\picker.time.js" />
+    <Content Include="Content\js\plugins\sliders\nouislider.min.js" />
+    <Content Include="Content\js\plugins\sliders\slider_pips.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\datatables.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\col_reorder.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\col_vis.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\fixed_columns.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\natural_sort.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\responsive.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\scroller.min.js" />
+    <Content Include="Content\js\plugins\tables\datatables\extensions\tools.min.js" />
+    <Content Include="Content\js\plugins\tables\footable\footable.min.js" />
+    <Content Include="Content\js\plugins\trees\fancytree_all.min.js" />
+    <Content Include="Content\js\plugins\trees\fancytree_childcounter.js" />
+    <Content Include="Content\js\plugins\ui\drilldown.js" />
+    <Content Include="Content\js\plugins\ui\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Content\js\plugins\ui\fullcalendar\lang\all.js" />
+    <Content Include="Content\js\plugins\ui\fullcalendar\lang\ar.js" />
+    <Content Include="Content\js\plugins\ui\headroom\headroom.min.js" />
+    <Content Include="Content\js\plugins\ui\headroom\headroom_jquery.min.js" />
+    <Content Include="Content\js\plugins\ui\moment\moment.min.js" />
+    <Content Include="Content\js\plugins\ui\nicescroll.min.js" />
+    <Content Include="Content\js\plugins\ui\prism.min.js" />
+    <Content Include="Content\js\plugins\uploaders\dropzone.min.js" />
+    <Content Include="Content\js\plugins\uploaders\fileinput.min.js" />
+    <Content Include="Content\js\plugins\uploaders\plupload\plupload.full.min.js" />
+    <Content Include="Content\js\plugins\uploaders\plupload\plupload.queue.min.js" />
+    <Content Include="Content\js\plugins\velocity\velocity.min.js" />
+    <Content Include="Content\js\plugins\velocity\velocity.ui.min.js" />
+    <Content Include="Content\js\plugins\visualization\c3\c3.min.js" />
+    <Content Include="Content\js\plugins\visualization\d3\d3.min.js" />
+    <Content Include="Content\js\plugins\visualization\d3\d3_tooltip.js" />
+    <Content Include="Content\js\plugins\visualization\d3\venn.js" />
+    <Content Include="Content\js\plugins\visualization\dimple\dimple.min.js" />
+    <Content Include="Content\js\plugins\visualization\echarts\echarts.js" />
+    <Content Include="Content\js\plugins\visualization\sparkline.min.js" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\swf\datatables\copy_csv_xls_pdf.swf" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\css\icons\fontawesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\css\icons\fontawesome\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="Content\css\icons\fontawesome\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="Content\css\icons\fontawesome\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="Content\css\icons\fontawesome\fonts\fontawesome-webfonte0a5.woff2" />
+    <Content Include="Content\css\icons\glyphicons\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\css\icons\glyphicons\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\css\icons\glyphicons\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\css\icons\glyphicons\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\css\icons\glyphicons\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\css\icons\icomoon\fonts\icomoond41d.eot" />
+    <Content Include="Content\css\icons\icomoon\fonts\icomoone627.eot" />
+    <Content Include="Content\css\icons\icomoon\fonts\icomoone627.ttf" />
+    <Content Include="Content\css\icons\icomoon\fonts\icomoone627.woff" />
+    <Content Include="Content\demo_data\d3\bars\bars_basic.tsv" />
+    <Content Include="Content\demo_data\d3\bars\bars_stacked_multiple.tsv" />
+    <Content Include="Content\demo_data\d3\bars\bars_tooltip.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_basic.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_bivariate.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_difference.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_gradient.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_multi_series.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_stacked.tsv" />
+    <Content Include="Content\demo_data\d3\lines\lines_transitions.tsv" />
+    <Content Include="Content\demo_data\d3\pies\donuts_update.tsv" />
+    <Content Include="Content\demo_data\d3\pies\pies_update.tsv" />
+    <Content Include="Content\demo_data\dimple\demo_data.tsv" />
+    <Content Include="App_Code\RazorHelper.cshtml" />
+    <Content Include="Service References\UPCNETServiceAdministrador\UPCNETSystemCliente.UPCNETServiceAdministrador.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAdministrador\UPCNETSystemCliente.UPCNETServiceAdministrador.editAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAdministrador\UPCNETSystemCliente.UPCNETServiceAdministrador.getAdministradorByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAdministrador\UPCNETSystemCliente.UPCNETServiceAdministrador.getAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAdministrador\UPCNETSystemCliente.UPCNETServiceAdministrador.setAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAdministrador\UPCNETSystemCliente.UPCNETServiceAdministrador.validarLoginAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETServiceAdministrador1.wsdl" />
+    <None Include="Service References\UPCNETServiceAdministrador\UPCNETServiceAdministrador1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETServiceAlumno.wsdl" />
+    <None Include="Service References\UPCNETServiceAlumno\UPCNETServiceAlumno.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceAdministrador\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceAdministrador\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceAdministrador\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UPCNETServiceAlumno\UPCNETSystemCliente.UPCNETServiceAlumno.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAlumno\UPCNETSystemCliente.UPCNETServiceAlumno.editAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAlumno\UPCNETSystemCliente.UPCNETServiceAlumno.getAlumnoByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAlumno\UPCNETSystemCliente.UPCNETServiceAlumno.getAlumnosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAlumno\UPCNETSystemCliente.UPCNETServiceAlumno.setAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceAlumno\UPCNETSystemCliente.UPCNETServiceAlumno.validarLoginAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceApoderado\UPCNETSystemCliente.UPCNETServiceApoderado.apoderado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceApoderado\UPCNETSystemCliente.UPCNETServiceApoderado.editApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceApoderado\UPCNETSystemCliente.UPCNETServiceApoderado.getApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceApoderado\UPCNETSystemCliente.UPCNETServiceApoderado.setApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETServiceApoderado1.wsdl" />
+    <None Include="Service References\UPCNETServiceApoderado\UPCNETServiceApoderado1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UPCNETServiceCategoria\UPCNETSystemCliente.UPCNETServiceCategoria.categoria.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCategoria\UPCNETSystemCliente.UPCNETServiceCategoria.editCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCategoria\UPCNETSystemCliente.UPCNETServiceCategoria.getCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCategoria\UPCNETSystemCliente.UPCNETServiceCategoria.setCategoriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceApoderado\UPCNETSystemCliente.UPCNETServiceApoderado.getApoderadoByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceApoderado\UPCNETSystemCliente.UPCNETServiceApoderado.validarLoginApoderadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETServiceCategoria1.wsdl" />
+    <None Include="Service References\UPCNETServiceCategoria\UPCNETServiceCategoria1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UPCNETServiceCiclo\UPCNETSystemCliente.UPCNETServiceCiclo.ciclo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCiclo\UPCNETSystemCliente.UPCNETServiceCiclo.editCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCiclo\UPCNETSystemCliente.UPCNETServiceCiclo.getCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCiclo\UPCNETSystemCliente.UPCNETServiceCiclo.setCicloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETServiceCiclo1.wsdl" />
+    <None Include="Service References\UPCNETServiceCiclo\UPCNETServiceCiclo1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceApoderado\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceApoderado\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceApoderado\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceCategoria\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceCategoria\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceCategoria\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceCiclo\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceCiclo\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceCiclo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETServiceCursoAlumno.wsdl" />
+    <None Include="Service References\UPCNETServiceCursoAlumno\UPCNETServiceCursoAlumno.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.cursoAlumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.editCursoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.getCursoAlumnoByIdCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.getCursoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.setCursoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.getCursoAlumnoByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.getCursoByIdAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.cursoAlumnoReporte.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoAlumno\UPCNETSystemCliente.UPCNETServiceCursoAlumno.getCursoAlumnoReporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETServiceCursoClase.wsdl" />
+    <None Include="Service References\UPCNETServiceCursoClase\UPCNETServiceCursoClase.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.cursoClase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.editCursoClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.getCursoClaseByIdCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.getCursoClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.setCursoClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.getCursoClaseByIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.cursoClaseAlumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCursoClase\UPCNETSystemCliente.UPCNETServiceCursoClase.getCursoClaseAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceCurso\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceCurso\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceCurso\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoAlumno\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceCursoAlumno\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceCursoAlumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceCursoClase\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceCursoClase\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceCursoClase\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.editProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.getProfesorByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.getProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.profesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.setProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.validarLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceCurso\UPCNETServiceCurso.wsdl" />
+    <None Include="Service References\UPCNETServiceCurso\UPCNETServiceCurso.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UPCNETServiceCurso\UPCNETSystemCliente.UPCNETServiceCurso.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCurso\UPCNETSystemCliente.UPCNETServiceCurso.editCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCurso\UPCNETSystemCliente.UPCNETServiceCurso.getCursoByIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCurso\UPCNETSystemCliente.UPCNETServiceCurso.getCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceCurso\UPCNETSystemCliente.UPCNETServiceCurso.setCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETServiceProfesor1.wsdl" />
+    <None Include="Service References\UPCNETServiceProfesor\UPCNETServiceProfesor1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\UPCNETServiceRecurso\UPCNETSystemCliente.UPCNETServiceRecurso.editRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceRecurso\UPCNETSystemCliente.UPCNETServiceRecurso.getRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceRecurso\UPCNETSystemCliente.UPCNETServiceRecurso.recurso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceRecurso\UPCNETSystemCliente.UPCNETServiceRecurso.setRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.alumnosEnCurso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.cursoProfesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.getAlumnosEnCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.getCursoProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.getHorarioProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.horarioProfesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETServiceProfesor\UPCNETSystemCliente.UPCNETServiceProfesor.setNotaAlumnosEnCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETServiceRecurso1.wsdl" />
+    <None Include="Service References\UPCNETServiceRecurso\UPCNETServiceRecurso1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UPCNETServiceRecurso\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceRecurso\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceRecurso\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETSystemWebService\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETSystemWebService\configuration.svcinfo" />
+    <None Include="Service References\UPCNETSystemWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceAlumno\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceAlumno\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceAlumno\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UPCNETServiceProfesor\configuration91.svcinfo" />
+    <None Include="Service References\UPCNETServiceProfesor\configuration.svcinfo" />
+    <None Include="Service References\UPCNETServiceProfesor\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Service References\UPCNETSystemWebService\UPCNETSystemCliente.UPCNETSystemWebService.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UPCNETSystemWebService\UPCNETSystemCliente.UPCNETSystemWebService.Enviar_AlumnosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\_ViewStart.cshtml" />
+    <Content Include="Views\Panel\Administrador.cshtml" />
+    <Content Include="Views\Panel\_ViewStart.cshtml" />
+    <Content Include="Views\Layout\PanelLayout.cshtml" />
+    <Content Include="Views\Panel\MantenimientoUsuarios.cshtml" />
+    <Content Include="Views\Panel\AddEditUsuario.cshtml" />
+    <Content Include="Views\Panel\MantenimientoApoderado.cshtml" />
+    <Content Include="Views\Panel\MantenimientoProfesores.cshtml" />
+    <Content Include="Views\Panel\AddEditProfesor.cshtml" />
+    <Content Include="Views\Panel\AddEditApoderado.cshtml" />
+    <Content Include="Views\Panel\AddEditCurso.cshtml" />
+    <Content Include="Views\Panel\MantenimientoCurso.cshtml" />
+    <Content Include="Views\Panel\AddEditCursoClase.cshtml" />
+    <Content Include="Views\Panel\MantenimientoCursoClase.cshtml" />
+    <Content Include="Views\Panel\AddEditCursoAlumno.cshtml" />
+    <Content Include="Views\Panel\MantenimientoCursoAlumno.cshtml" />
+    <Content Include="Views\Layout\AlumnoLayout.cshtml" />
+    <Content Include="Views\Alumno\Principal.cshtml" />
+    <Content Include="Views\Alumno\LstCurso.cshtml" />
+    <Content Include="Views\Layout\ProfesorLayout.cshtml" />
+    <Content Include="Views\Profesor\Horario.cshtml" />
+    <Content Include="Views\Profesor\LstCurso.cshtml" />
+    <Content Include="Views\Profesor\LstAlumno.cshtml" />
+    <Content Include="Views\Profesor\AddEditNotaAlumno.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\UPCNETServiceAdministrador\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceAlumno\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceApoderado\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCategoria\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCiclo\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCursoAlumno\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCursoClase\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceCurso\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceProfesor\" />
+    <WCFMetadataStorage Include="Service References\UPCNETServiceRecurso\" />
+    <WCFMetadataStorage Include="Service References\UPCNETSystemWebService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UPCNETSystemWebService\UPCNETService.wsdl" />
+    <None Include="Service References\UPCNETSystemWebService\UPCNETService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Globalization\ValidationString.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationString.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64373/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

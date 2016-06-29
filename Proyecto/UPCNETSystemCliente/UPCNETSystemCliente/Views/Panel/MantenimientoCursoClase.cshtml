@@ -1,0 +1,40 @@
+﻿@model UPCNETSystemCliente.ViewModel.Panel._MantenimientoCursoClase
+<div class="panel panel-flat">
+    <div class="panel-heading">
+        <h5 class="panel-title"><strong>Listado de Clases por curso</strong></h5>
+    </div>
+    <div class="panel-body">
+        En esta sección podrás gestionar las Clases por Curso
+    </div>
+    <div class="panel-body">
+
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>HoraFin</th>
+                <th>Hora Ini</th>
+                <th>IDClase</th>
+                <th>IDCurso</th>
+                <th>O1</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ListObjetos)
+            {
+                <tr>
+
+                    <td>@item.Dia</td>
+                    <td>@item.HoraFin</td>
+                    <td>@item.HoraIni</td>
+                    <td>@item.IDClase</td>
+                    <td>@item.IDCurso</td>
+                    <td>
+                        <a href="@Url.Action("AddEditCursoClase",new{ IDCurso= item.IDCurso,IDClase=item.IDClase,Modo= "Editar"})"><i class="fa fa-edit"></i> Editar Curso</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

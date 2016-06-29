@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.upcnet.upc.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="UPCNETServiceProfesor" targetNamespace="http://Services.upcnet.upc.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceProfesor?xsd=1" namespace="http://Services.upcnet.upc.com/" />
+    </xsd:schema>
+  </types>
+  <message name="validarLogin">
+    <part name="parameters" element="tns:validarLogin" />
+  </message>
+  <message name="validarLoginResponse">
+    <part name="parameters" element="tns:validarLoginResponse" />
+  </message>
+  <message name="getAlumnosEnCurso">
+    <part name="parameters" element="tns:getAlumnosEnCurso" />
+  </message>
+  <message name="getAlumnosEnCursoResponse">
+    <part name="parameters" element="tns:getAlumnosEnCursoResponse" />
+  </message>
+  <message name="getHorarioProfesor">
+    <part name="parameters" element="tns:getHorarioProfesor" />
+  </message>
+  <message name="getHorarioProfesorResponse">
+    <part name="parameters" element="tns:getHorarioProfesorResponse" />
+  </message>
+  <message name="setNotaAlumnosEnCurso">
+    <part name="parameters" element="tns:setNotaAlumnosEnCurso" />
+  </message>
+  <message name="setNotaAlumnosEnCursoResponse">
+    <part name="parameters" element="tns:setNotaAlumnosEnCursoResponse" />
+  </message>
+  <message name="getProfesorById">
+    <part name="parameters" element="tns:getProfesorById" />
+  </message>
+  <message name="getProfesorByIdResponse">
+    <part name="parameters" element="tns:getProfesorByIdResponse" />
+  </message>
+  <message name="getCursoProfesor">
+    <part name="parameters" element="tns:getCursoProfesor" />
+  </message>
+  <message name="getCursoProfesorResponse">
+    <part name="parameters" element="tns:getCursoProfesorResponse" />
+  </message>
+  <message name="editProfesor">
+    <part name="parameters" element="tns:editProfesor" />
+  </message>
+  <message name="editProfesorResponse">
+    <part name="parameters" element="tns:editProfesorResponse" />
+  </message>
+  <message name="getProfesor">
+    <part name="parameters" element="tns:getProfesor" />
+  </message>
+  <message name="getProfesorResponse">
+    <part name="parameters" element="tns:getProfesorResponse" />
+  </message>
+  <message name="setProfesor">
+    <part name="parameters" element="tns:setProfesor" />
+  </message>
+  <message name="setProfesorResponse">
+    <part name="parameters" element="tns:setProfesorResponse" />
+  </message>
+  <portType name="UPCNETServiceProfesor">
+    <operation name="validarLogin">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/validarLoginRequest" message="tns:validarLogin" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/validarLoginResponse" message="tns:validarLoginResponse" />
+    </operation>
+    <operation name="getAlumnosEnCurso">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getAlumnosEnCursoRequest" message="tns:getAlumnosEnCurso" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getAlumnosEnCursoResponse" message="tns:getAlumnosEnCursoResponse" />
+    </operation>
+    <operation name="getHorarioProfesor">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getHorarioProfesorRequest" message="tns:getHorarioProfesor" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getHorarioProfesorResponse" message="tns:getHorarioProfesorResponse" />
+    </operation>
+    <operation name="setNotaAlumnosEnCurso">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/setNotaAlumnosEnCursoRequest" message="tns:setNotaAlumnosEnCurso" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/setNotaAlumnosEnCursoResponse" message="tns:setNotaAlumnosEnCursoResponse" />
+    </operation>
+    <operation name="getProfesorById">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getProfesorByIdRequest" message="tns:getProfesorById" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getProfesorByIdResponse" message="tns:getProfesorByIdResponse" />
+    </operation>
+    <operation name="getCursoProfesor">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getCursoProfesorRequest" message="tns:getCursoProfesor" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getCursoProfesorResponse" message="tns:getCursoProfesorResponse" />
+    </operation>
+    <operation name="editProfesor">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/editProfesorRequest" message="tns:editProfesor" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/editProfesorResponse" message="tns:editProfesorResponse" />
+    </operation>
+    <operation name="getProfesor">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getProfesorRequest" message="tns:getProfesor" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/getProfesorResponse" message="tns:getProfesorResponse" />
+    </operation>
+    <operation name="setProfesor">
+      <input wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/setProfesorRequest" message="tns:setProfesor" />
+      <output wsam:Action="http://Services.upcnet.upc.com/UPCNETServiceProfesor/setProfesorResponse" message="tns:setProfesorResponse" />
+    </operation>
+  </portType>
+  <binding name="UPCNETServiceProfesorPortBinding" type="tns:UPCNETServiceProfesor">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="validarLogin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAlumnosEnCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getHorarioProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setNotaAlumnosEnCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProfesorById">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCursoProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="UPCNETServiceProfesor">
+    <port name="UPCNETServiceProfesorPort" binding="tns:UPCNETServiceProfesorPortBinding">
+      <soap:address location="http://localhost:8080/UPCNETSystemWebService/UPCNETServiceProfesor" />
+    </port>
+  </service>
+</definitions>
